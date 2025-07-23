@@ -15,7 +15,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             Swipe, Match, Explore Safely
           </h1>
           <p className="hero-subtitle">
-            FridayStag is India's first platform for urban solos, connecting you to verified stag-friendly bars and like-minded night owls every Friday night. With safety-first features like SOS tracking and women-only options, transform your solo adventures into epic nights in Hyderabad, Bengaluru, Delhi, and beyond.
+            FridayStag is India's first platform for urban solos, connecting you to verified stag-friendly bars and like-minded souls every Friday night. With safety-first features like SOS tracking and women-only options, transform your solo life into epic nights in Hyderabad, Bengaluru, Delhi, and beyond.
           </p>
           
           <button
@@ -42,7 +42,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <Users className="w-8 h-8 text-white" />
             </div>
             <h3 className="feature-title">Connect on Fridays</h3>
-            <p className="feature-description">Swipe to match with verified users for platonic nightlife vibes, live every Friday at 6 PM.</p>
+            <p className="feature-description">Swipe to match with verified users for perfect nightlife vibes, live every Friday at 6 PM.</p>
           </div>
 
           <div className="feature-card glass-card">

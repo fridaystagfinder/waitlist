@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Instagram, Mail, MapPin } from 'lucide-react';
+import { Instagram, Mail, MapPin, X } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -14,7 +14,7 @@ export function Footer() {
             </p>
             <div className="flex items-center space-x-2 text-sm mt-2">
               <MapPin className="w-4 h-4" />
-              <span>Hyderabad • Austin • Tokyo</span>
+              <span>Hyderabad • Bengaluru • Delhi • Mumbai • Chennai • Kolkata • Pune • Ahmedabad • Jaipur • Austin • Tokyo</span>
             </div>
           </div>
 
@@ -34,12 +34,12 @@ export function Footer() {
             <h4>Connect</h4>
             <div className="social-links">
               <a
-                href="https://twitter.com/fridaystag"
+                href="https://x.com/fridaystag"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
               >
-                <Twitter className="w-5 h-5" />
+                <X className="w-5 h-5" />
               </a>
               <a
                 href="https://instagram.com/fridaystag"

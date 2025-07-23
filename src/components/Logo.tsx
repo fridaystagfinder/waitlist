@@ -1,11 +1,15 @@
 import React from 'react';
-import { Star } from 'lucide-react';
 
 export function Logo() {
   return (
     <div className="logo-container">
       <div className="logo-icon">
-        <Star className="w-6 h-6 text-white fill-white" />
+        <img 
+          src="/Logo_FSF-removebg-preview.png" 
+          alt="FridayStag Logo" 
+          className="w-8 h-8 object-contain"
+          style={{ filter: 'brightness(0) saturate(100%) invert(100%)' }}
+        />
       </div>
       <div>
         <h1 className="logo-text">
