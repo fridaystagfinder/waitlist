@@ -285,7 +285,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                   value={formData.comments}
                   onChange={(e) => handleInputChange('comments', e.target.value)}
                   className="form-input min-h-[120px] resize-y"
-                  placeholder="e.g., 'women-only events, favorite venues'"
+                  placeholder=""
                   disabled={isSubmitting}
                   rows={4}
                 />
