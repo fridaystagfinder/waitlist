@@ -134,10 +134,39 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         <div className="glass-card p-8 md:p-12">
           <div className="text-center mb-8">
             <h2 className="section-title mb-4">
-              Join the Stag Revolution
+              Who's joining us?
             </h2>
+            
+            {/* User testimonial */}
+            <div className="glass-card p-6 mb-6 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center space-x-4 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-accent-purple to-accent-pink rounded-full flex items-center justify-center">
+                  <User className="w-5 h-5 text-white" />
+                </div>
+                <div className="w-10 h-10 bg-gradient-to-r from-accent-gold to-accent-purple rounded-full flex items-center justify-center">
+                  <User className="w-5 h-5 text-white" />
+                </div>
+                <div className="w-10 h-10 bg-gradient-to-r from-accent-pink to-accent-gold rounded-full flex items-center justify-center">
+                  <User className="w-5 h-5 text-white" />
+                </div>
+              </div>
+              <p className="text-accent-gold font-medium italic">
+                "Finally, I can plan nights out with confidence!"
+              </p>
+              <p className="text-sm text-gray-400 mt-2">— actual beta user</p>
+            </div>
+            
+            {/* Progress indicator */}
+            <div className="mb-6">
+              <div className="flex items-center justify-center space-x-2 text-accent-purple">
+                <div className="w-2 h-2 bg-accent-purple rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">Thousands already on our waitlist</span>
+                <div className="w-2 h-2 bg-accent-purple rounded-full animate-pulse"></div>
+              </div>
+            </div>
+            
             <p className="section-subtitle">
-              Be the first to experience <em className="text-accent-pink">FridayStag</em>'s nightlife revolution! Join our waitlist for early access, exclusive Friday events, and VIP perks. With 50 beta users already raving in Hyderabad and Bengaluru, your epic nights start here.
+              Join the waitlist for early access to India's first solo-friendly nightlife app. No fees, no fake profiles, just real connections.
             </p>
           </div>
 
@@ -310,15 +339,19 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                 {isSubmitting ? (
                   <>
                     <div className="spinner" />
-                    <span>Joining Revolution...</span>
+                    <span>Unleashing Your Stag Life...</span>
                   </>
                 ) : (
                   <>
                     <CheckCircle className="w-5 h-5" />
-                    <span>Join the Stag Revolution!</span>
+                    <span>Unleash Your Stag Life</span>
                   </>
                 )}
               </button>
+              
+              <p className="text-center text-sm text-gray-400 mt-4">
+                Zero fees. Stealth phase. Early access only.
+              </p>
             </form>
           </div>
         </div>

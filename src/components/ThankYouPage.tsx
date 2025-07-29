@@ -29,10 +29,10 @@ export function ThankYouPage({ userName, onBackToHome }: ThankYouPageProps) {
 
         {/* Thank You Message */}
         <h1 className="thank-you-title">
-          Welcome to the Stag Revolution, {userName}!
+          Welcome to Your Stag Life, {userName}!
         </h1>
         <p className="thank-you-message">
-          You're officially part of the FridayStag movement. Check your email for confirmation and get ready to revolutionize your Friday nights!
+          You're officially part of the FridayStag community. Check your email for confirmation and get ready to unleash your stag life!
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400 mb-8">

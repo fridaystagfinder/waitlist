@@ -10,12 +10,15 @@ export function Footer() {
           <div className="footer-section">
             <h4>FridayStag</h4>
             <p>
-              Unleashing stag life across India, US, and Japan. Join the nightlife revolution.
+              Unleash Your Stag Life. Built for solos, not groups.
             </p>
             <div className="flex items-center space-x-2 text-sm mt-2">
               <MapPin className="w-4 h-4" />
-              <span>Hyderabad • Bengaluru • Delhi • Mumbai • Chennai • Kolkata • Pune • Ahmedabad • Jaipur • Austin • Tokyo</span>
+              <span>Hyderabad • Bengaluru • Delhi • Mumbai • Chennai • Kolkata • Pune • Ahmedabad • Jaipur</span>
             </div>
+            <p className="text-xs text-gray-500 mt-3">
+              Confidential — Not for distribution. Your data stays with you—never shared or sold.
+            </p>
           </div>
 
           {/* Navigation */}
@@ -23,9 +26,10 @@ export function Footer() {
             <h4>Quick Links</h4>
             <nav className="space-y-2">
               <a href="#home" className="block hover:text-purple-400 transition-colors">Home</a>
-              <a href="#about" className="block hover:text-purple-400 transition-colors">About</a>
+              <a href="#about" className="block hover:text-purple-400 transition-colors">Why</a>
               <a href="#waitlist" className="block hover:text-purple-400 transition-colors">Waitlist</a>
               <a href="/privacy-policy" className="block hover:text-purple-400 transition-colors">Privacy Policy</a>
+              <a href="#venues" className="block hover:text-purple-400 transition-colors">Stag-friendly bars near me</a>
             </nav>
           </div>
 
