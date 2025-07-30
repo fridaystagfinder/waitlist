@@ -48,7 +48,7 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              lineHeight: 1,
+              lineHeight: 1.5,
               fontWeight: 600,
               letterSpacing: 0.3,
               textAlign: 'center',
