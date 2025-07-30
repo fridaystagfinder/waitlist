@@ -6,7 +6,7 @@ interface LogoProps {
   size?: number; // px, for mascot; full logo is responsive
 }
 
-export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
+export function Logo({ onClick, variant = 'full', size = 56 }: LogoProps) {
   if (variant === 'full') {
     // Full logo for header - mascot + text + tagline
     return (
