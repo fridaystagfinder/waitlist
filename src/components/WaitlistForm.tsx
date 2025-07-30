@@ -18,20 +18,21 @@ interface FormData {
 interface FormErrors {
   name?: string;
   email?: string;
+  phone?: string;
   city?: string;
   consent?: string;
 }
 
 const predefinedCities = [
   'Hyderabad',
-  'Bengaluru',
   'Delhi',
-  'Mumbai',
-  'Chennai',
-  'Kolkata',
+  'Bengaluru',
   'Pune',
-  'Ahmedabad',
-  'Jaipur',
+  'Mumbai',
+  'Goa',
+  'Kolkata',
+  'Chennai',
+  'Vizag',
   'Other'
 ];
 
@@ -65,6 +66,11 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
       newErrors.email = 'Email address is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
+    }
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!/^\+?[\d\s\-\(\)]{10,}$/.test(formData.phone.trim())) {
+      newErrors.phone = 'Please enter a valid phone number';
     }
     if (!formData.city) {
       newErrors.city = 'City is required';
@@ -135,7 +141,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         <div className="glass-card p-8 md:p-12">
           <div className="text-center mb-8">
             <h2 className="section-title mb-4">
-              Who's joining us?
+              Join the Stag Revolution
             </h2>
 
             {/* User testimonial */}
@@ -144,14 +150,14 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                 <div className="w-10 h-10 bg-gradient-to-r from-accent-purple to-accent-pink rounded-full flex items-center justify-center">
                   <User className="w-5 h-5 text-white" />
                 </div>
-                <div className="w-10 h-10 bg-gradient-to-r from-accent-gold to-accent-purple rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-accent-orange to-accent-purple rounded-full flex items-center justify-center">
                   <User className="w-5 h-5 text-white" />
                 </div>
-                <div className="w-10 h-10 bg-gradient-to-r from-accent-pink to-accent-gold rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-accent-pink to-accent-orange rounded-full flex items-center justify-center">
                   <User className="w-5 h-5 text-white" />
                 </div>
               </div>
-              <p className="text-accent-gold font-medium italic">
+              <p className="text-accent-orange font-medium italic">
                 "Finally, I can plan nights out with confidence!"
               </p>
               <p className="text-sm text-gray-400 mt-2">— actual beta user</p>
@@ -161,13 +167,13 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <div className="mb-6">
               <div className="flex items-center justify-center space-x-2 text-accent-purple">
                 <div className="w-2 h-2 bg-accent-purple rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">Thousands already on our waitlist</span>
+                <span className="text-sm font-medium">Join thousands on the waitlist</span>
                 <div className="w-2 h-2 bg-accent-purple rounded-full animate-pulse"></div>
               </div>
             </div>
 
             <p className="section-subtitle">
-              Join the waitlist for early access to India's first solo-friendly nightlife app. No fees, no fake profiles, just real connections.
+              Be among the first to experience India's solo-friendly nightlife app. Get early access to Friday Swipes, verified venues, and exclusive safety features. Always free, always private.
             </p>
           </div>
 
@@ -223,17 +229,23 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
               <div className="form-group">
                 <label htmlFor="phone" className="form-label">
                   <Phone className="w-4 h-4" />
-                  Phone Number (Optional)
+                  Phone Number *
                 </label>
                 <input
                   type="tel"
                   id="phone"
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
-                  className="form-input"
+                  className={`form-input ${errors.phone ? 'error' : ''}`}
                   placeholder="+91 XXXXX XXXXX"
                   disabled={isSubmitting}
                 />
+                {errors.phone && (
+                  <div className="form-error">
+                    <AlertCircle className="w-4 h-4" />
+                    {errors.phone}
+                  </div>
+                )}
                 <p className="text-xs text-gray-500 mt-1">Include country code for better experience</p>
               </div>
 
@@ -340,18 +352,18 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                 {isSubmitting ? (
                   <>
                     <div className="spinner" />
-                    <span>Unleashing Your Stag Life...</span>
+                    <span>Joining the Revolution...</span>
                   </>
                 ) : (
                   <>
                     <CheckCircle className="w-5 h-5" />
-                    <span>Unleash Your Stag Life</span>
+                    <span>Join the Revolution</span>
                   </>
                 )}
               </button>
 
               <p className="text-center text-sm text-gray-400 mt-4">
-                Zero fees. Stealth phase. Early access only.
+                Always free, always private.
               </p>
             </form>
           </div>

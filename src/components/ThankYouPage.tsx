@@ -77,8 +77,8 @@ export function ThankYouPage({ userName, onBackToHome }: ThankYouPageProps) {
           
           <p className="text-sm text-gray-500">
             Questions? Reach out to us at{' '}
-            <a href="mailto:hello@fridaystag.com" className="text-purple-400 hover:text-yellow-400 underline">
-              hello@fridaystag.com
+            <a href="mailto:fridaystagfinder@gmail.com" className="text-purple-400 hover:text-orange-400 underline">
+              fridaystagfinder@gmail.com
             </a>
           </p>
         </div>

@@ -14,7 +14,7 @@ export function Footer() {
             </p>
             <div className="flex items-center space-x-2 text-sm mt-2">
               <MapPin className="w-4 h-4" />
-              <span>Hyderabad • Bengaluru • Delhi • Mumbai • Chennai • Kolkata • Pune • Ahmedabad • Jaipur</span>
+              <span>Hyderabad • Delhi • Bengaluru • Pune • Mumbai • Goa • Kolkata • Chennai • Vizag</span>
             </div>
             <p className="text-xs text-gray-500 mt-3">
               Confidential — Not for distribution. Your data stays with you—never shared or sold.
@@ -29,7 +29,6 @@ export function Footer() {
               <a href="#about" className="block hover:text-purple-400 transition-colors">Why</a>
               <a href="#waitlist" className="block hover:text-purple-400 transition-colors">Waitlist</a>
               <a href="/privacy-policy" className="block hover:text-purple-400 transition-colors">Privacy Policy</a>
-              <a href="#venues" className="block hover:text-purple-400 transition-colors">Stag-friendly bars near me</a>
             </nav>
           </div>
 
@@ -54,17 +53,20 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="mailto:hello@fridaystag.com"
+                href="mailto:fridaystagfinder@gmail.com"
                 className="social-link"
               >
                 <Mail className="w-5 h-5" />
               </a>
             </div>
+            <p className="text-sm text-gray-400 mt-3">
+              fridaystagfinder@gmail.com
+            </p>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>© 2025 FridayStag. All rights reserved.</p>
+          <p>© 2025 FridayStag. All rights reserved. Confidential - Not for distribution without permission.</p>
         </div>
       </div>
     </footer>

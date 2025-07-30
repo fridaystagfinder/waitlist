@@ -6,7 +6,7 @@
 
 :root {
   --accent-purple: #8b5cf6;
-  --accent-gold: #fbbf24;
+  --accent-orange: #f97316;
   --accent-pink: #f472b6;
   --text-primary: #ffffff;
   --text-secondary: #e5e7eb;
@@ -14,7 +14,7 @@
   --bg-primary: #0a0a0f;
   --bg-secondary: #111827;
   --bg-tertiary: #1f2937;
-  --bg-card: rgba(17, 24, 39, 0.8);
+  --bg-card: rgba(17, 24, 39, 0.7);
   --border-primary: rgba(139, 92, 246, 0.2);
   --border-secondary: rgba(75, 85, 99, 0.3);
 }
@@ -39,7 +39,7 @@ body {
   background: 
     radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(244, 114, 182, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
     linear-gradient(135deg, var(--bg-primary) 0%, #0f0f23 50%, var(--bg-primary) 100%);
 }
 
@@ -48,10 +48,10 @@ body {
   inset: 0;
   background-image: 
     radial-gradient(2px 2px at 20px 30px, rgba(139, 92, 246, 0.8), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(251, 191, 36, 0.6), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(249, 115, 22, 0.6), transparent),
     radial-gradient(1px 1px at 90px 40px, rgba(244, 114, 182, 0.7), transparent),
     radial-gradient(1px 1px at 130px 80px, rgba(139, 92, 246, 0.5), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(251, 191, 36, 0.8), transparent);
+    radial-gradient(2px 2px at 160px 30px, rgba(249, 115, 22, 0.8), transparent);
   background-repeat: repeat;
   background-size: 200px 100px;
   animation: cityLights 20s linear infinite;
@@ -101,6 +101,18 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.logo-container:focus {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 
 .logo-icon {
@@ -136,7 +148,7 @@ body {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-gold));
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -190,7 +202,7 @@ body {
   font-weight: 800;
   font-size: clamp(2.5rem, 8vw, 4rem);
   line-height: 1.1;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-purple) 50%, var(--accent-gold) 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-purple) 50%, var(--accent-orange) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -211,7 +223,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: 16px 32px;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
   color: white;
   font-weight: 600;
   font-size: 1.125rem;
@@ -227,7 +239,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
   border-radius: 16px;
   filter: blur(12px);
   opacity: 0.6;
@@ -390,7 +402,7 @@ body {
 }
 
 .checkbox-label a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-orange);
   text-decoration: underline;
 }
 
@@ -460,7 +472,7 @@ body {
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
   font-size: 2rem;
-  color: var(--accent-gold);
+  color: var(--accent-orange);
   display: block;
 }
 
@@ -584,7 +596,7 @@ body {
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--text-primary), var(--accent-gold));
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-orange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -701,4 +713,26 @@ body {
 .checkbox:focus {
   outline: 2px solid var(--accent-purple);
   outline-offset: 2px;
+}
+
+/* Investor CTA Styles */
+.investor-cta {
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.investor-cta-button {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.investor-cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Ensure main content doesn't get hidden behind sticky CTA */
+.main-content {
+  padding-bottom: 80px;
 }

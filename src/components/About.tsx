@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Shield, Sparkles, Target, DollarSign, Users } from 'lucide-react';
+import { Shield, Users, Target } from 'lucide-react';
 
 export function About() {
   return (
@@ -10,7 +10,7 @@ export function About() {
             Why FridayStag?
           </h2>
           <p className="section-subtitle">
-            Built for solos, not groups. Break free from awkward restrictions and finally go out on your terms—whether it's for fun, work, or a new connection. Privacy-first, always. No fake romance, no paid upgrades, no crowd manipulation—just real people, real places, always free for users.
+            India's nightlife and urban spaces weren't built for solos. FridayStag changes that. We're building a new kind of urban access layer—for anyone who moves independently but wants to feel welcome. From solo after-work plans to Friday bar nights, we make it easier to step out, connect, and feel sorted. We're solving for access, trust, and a better way to be solo—without being alone.
           </p>
         </div>
 
@@ -18,31 +18,30 @@ export function About() {
           <div className="about-card glass-card">
             <div className="about-card-title">
               <Shield className="w-8 h-8" />
-              Safe, Stigma-Free Nightlife
+              Safe, Stigma-Free Access
             </div>
             <div className="about-card-content">
-              No more "stags not allowed" signs. Our community-powered safety features and verified venues ensure you can explore confidently, whether you're looking for a quiet café or a vibrant nightclub.
+              Break free from 'stags not allowed' and harassment. Verified venues and community-powered safety features like Women-Only Mode and SOS Shield let you explore confidently.
             </div>
           </div>
 
           <div className="about-card glass-card">
             <div className="about-card-title">
               <Users className="w-8 h-8" />
-              Real Connections Over Endless Swipes
+              Friday-Only, Real Connections
             </div>
             <div className="about-card-content">
-              Friday-only matching means quality over quantity. Connect with people who actually want to meet up, not just collect matches. Real conversations, real meetups, real connections.
+              Ditch endless dating swipes. Our exclusive Friday-Only Swipe connects verified solos for quality, platonic meetups—no romance pressure.
             </div>
           </div>
 
-          
           <div className="about-card glass-card">
             <div className="about-card-title">
               <Target className="w-8 h-8" />
-              Community-Powered Trust and Safety
+              Trust & Privacy First
             </div>
             <div className="about-card-content">
-              Built by solos, for solos. Our community rates venues, shares safety tips, and looks out for each other. Your data stays with you—never shared or sold.
+              Built by solos, for solos. We prioritize your trust and privacy—venue verification, opt-in data sharing, and a commitment to keeping user data private. Forever free for users.
             </div>
           </div>
         </div>

@@ -1,8 +1,23 @@
 import React from 'react';
 
-export function Logo() {
+interface LogoProps {
+  onClick?: () => void;
+}
+
+export function Logo({ onClick }: LogoProps) {
   return (
-    <div className="logo-container">
+    <div 
+      className="logo-container cursor-pointer transition-transform hover:scale-105" 
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick?.();
+        }
+      }}
+    >
       <div className="logo-icon">
         <img 
           src="/Logo_FSF-removebg-preview.png" 
