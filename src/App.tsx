@@ -51,6 +51,13 @@ function App() {
     }
   }, [activeTab]);
 
+  // Scroll to top when about tab is active
+  React.useEffect(() => {
+    if (activeTab === 'about') {
+      window.scrollTo(0, 0);
+    }
+  }, [activeTab]);
+
   if (showThankYou) {
     return (
       <>
@@ -97,7 +104,7 @@ function App() {
         <header className="header">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Logo onClick={handleLogoClick} />
-            <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
+            <TabNavigation activeTab={activeTab} onTabChange={handleNavigation} />
           </div>
         </header>
 

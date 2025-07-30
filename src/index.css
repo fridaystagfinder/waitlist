@@ -823,10 +823,16 @@ main {
   
   /* Logo responsive adjustments */
   .logo-full span {
-    font-size: 56px !important;
-    letter-spacing: 0.5 !important;
+    font-size: 42px !important;
+    letter-spacing: 0.3 !important;
     line-height: 1.2 !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 4px !important;
+    font-family: 'Inter, sans-serif' !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    text-decoration: underline !important;
+    text-decoration-color: #8b5cf6 !important;
+    text-underline-offset: 4px !important;
   }
   
   .logo-full div span {
@@ -838,7 +844,8 @@ main {
   }
   
   .logo-tagline {
-    display: none !important;
+    display: flex !important;
+    font-size: 10px !important;
   }
   
   .logo-full img {
@@ -1047,10 +1054,16 @@ main {
   
   /* Logo adjustments for very small screens */
   .logo-full span {
-    font-size: 50px !important;
-    letter-spacing: 0.4 !important;
+    font-size: 36px !important;
+    letter-spacing: 0.2 !important;
     line-height: 1.2 !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 3px !important;
+    font-family: 'Inter, sans-serif' !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    text-decoration: underline !important;
+    text-decoration-color: #8b5cf6 !important;
+    text-underline-offset: 3px !important;
   }
   
   .logo-full div span {
@@ -1062,7 +1075,8 @@ main {
   }
   
   .logo-tagline {
-    display: none !important;
+    display: flex !important;
+    font-size: 9px !important;
   }
   
   .logo-full img {

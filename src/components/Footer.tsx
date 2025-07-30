@@ -12,9 +12,32 @@ export function Footer({ onNavigate }: FooterProps) {
         <div className="footer-grid">
           {/* Brand Section */}
           <div className="footer-section">
-            <h4>FridayStag</h4>
+            <div className="flex items-center gap-3 mb-3">
+              <img
+                src="/logo-mascot.png"
+                alt="FridayStag Mascot"
+                className="w-8 h-8"
+                style={{
+                  filter: 'drop-shadow(0 0 4px rgba(139, 92, 246, 0.3))',
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: "'Pacifico', cursive",
+                  fontSize: 24,
+                  background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  fontWeight: 600,
+                  letterSpacing: 0.3,
+                }}
+              >
+                FridayStag
+              </span>
+            </div>
             <p>
-              Unleash Your Stag Life. Built for solos, not groups.
+              Built in India. For solos everywhere!
             </p>
             <div className="flex items-center space-x-2 text-sm mt-2">
               <MapPin className="w-4 h-4 text-purple-400" />
@@ -128,6 +151,7 @@ export function Footer({ onNavigate }: FooterProps) {
         
         <div className="footer-bottom">
           <p>© 2025 FridayStag.com | FridayStagFinder.com | App coming soon!</p>
+          <p className="text-sm text-gray-400 mt-2">Built in India. For solos everywhere!</p>
         </div>
       </div>
     </footer>
