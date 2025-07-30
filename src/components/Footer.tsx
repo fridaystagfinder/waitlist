@@ -90,7 +90,7 @@ export function Footer({ onNavigate }: FooterProps) {
         </div>
         
         <div className="footer-bottom">
-          <p>© 2025 FridayStag. All rights reserved. Confidential - Not for distribution without permission.</p>
+          <p>© 2025 FridayStag.com | App coming soon!</p>
         </div>
       </div>
     </footer>

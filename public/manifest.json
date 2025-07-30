@@ -1,7 +1,7 @@
 {
   "name": "FridayStag",
   "short_name": "FridayStag",
-  "description": "India's first solo-friendly nightlife app",
+  "description": "India's premier solo nightlife app - Connect with verified venues and solo goers for safe nightlife experiences",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0f",
