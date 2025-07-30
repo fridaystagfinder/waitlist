@@ -144,6 +144,121 @@ body {
   50% { opacity: 0.9; transform: scale(1.05); }
 }
 
+/* Enhanced Nightlife Logo */
+.nightlife-logo {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink), var(--accent-orange));
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease-in-out infinite, logoPulse 2s ease-in-out infinite;
+  box-shadow: 
+    0 0 20px rgba(139, 92, 246, 0.4),
+    0 0 40px rgba(244, 114, 182, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Logo Glow Effect */
+.logo-glow {
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--accent-purple), var(--accent-pink), var(--accent-orange), var(--accent-purple));
+  border-radius: 14px;
+  filter: blur(4px);
+  opacity: 0.7;
+  animation: glowRotate 6s linear infinite;
+  z-index: -2;
+}
+
+@keyframes glowRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Sparkle Effects */
+.logo-sparkle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.sparkle-1 {
+  top: 8px;
+  right: 8px;
+  animation-delay: 0s;
+}
+
+.sparkle-2 {
+  bottom: 10px;
+  left: 6px;
+  animation-delay: 1s;
+}
+
+.sparkle-3 {
+  top: 12px;
+  left: 10px;
+  animation-delay: 2s;
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0) rotate(0deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1) rotate(180deg); 
+  }
+}
+
+/* Enhanced Logo Text */
+.nightlife-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink), var(--accent-orange));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGradient 4s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+@keyframes textGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Enhanced Slogan */
+.nightlife-slogan {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: -4px;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: sloganPulse 2s ease-in-out infinite;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+@keyframes sloganPulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
 .logo-text {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
