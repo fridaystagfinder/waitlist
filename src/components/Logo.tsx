@@ -36,54 +36,49 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
         <div style={{ 
           display: 'flex', 
           flexDirection: 'column', 
-          alignItems: 'flex-start', 
+          alignItems: 'center', 
           justifyContent: 'center',
           minWidth: 0,
         }}>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            width: '100%',
-          }}>
-            <span
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: 28,
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                lineHeight: 1.1,
-                fontWeight: 800,
-                letterSpacing: 0.5,
-                textTransform: 'uppercase',
-              }}
-            >
-              FridayStag
-            </span>
-            <div
-              style={{
-                fontFamily: 'Inter, sans-serif',
-                fontSize: 12,
-                marginTop: 2,
-                fontWeight: 600,
-                letterSpacing: 0.3,
-                display: 'flex',
-                alignItems: 'center',
-                gap: 2,
-                width: '100%',
-                justifyContent: 'flex-start',
-                color: '#9ca3af',
-              }}
-            >
-              <span style={{ color: '#8b5cf6' }}>Solo? You're</span>
-              <span style={{ 
-                fontWeight: 700,
-                color: '#ec4899',
-                textTransform: 'uppercase',
-              }}>IN.</span>
-            </div>
+          <span
+            style={{
+              fontFamily: "'Pacifico', cursive",
+              fontSize: 30,
+              background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              lineHeight: 1,
+              fontWeight: 600,
+              letterSpacing: 0.3,
+              textAlign: 'center',
+              width: '100%',
+            }}
+          >
+            FridayStag
+          </span>
+          <div
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontSize: 11,
+              marginTop: 2,
+              fontWeight: 600,
+              letterSpacing: 0.3,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 2,
+              width: '100%',
+              color: '#9ca3af',
+              textAlign: 'center',
+            }}
+          >
+            <span style={{ color: '#8b5cf6' }}>Solo? You're</span>
+            <span style={{ 
+              fontWeight: 700,
+              color: '#ec4899',
+              textTransform: 'uppercase',
+            }}>IN.</span>
           </div>
         </div>
       </div>

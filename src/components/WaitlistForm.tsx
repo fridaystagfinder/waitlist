@@ -134,59 +134,95 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
 
   return (
     <section className="relative py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <div className="glass-card p-8 md:p-12">
-          <div className="text-center mb-6">
-            {/* Glowing Mascot */}
-            <div className="mb-4 flex justify-center">
-              <img
-                src="/logo-mascot.png"
-                alt="FridayStag Mascot"
-                style={{
-                  width: 80,
-                  height: 80,
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.4))',
-                }}
-              />
+      <div className="container mx-auto max-w-4xl">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <div className="mb-6 flex justify-center">
+            <img
+              src="/logo-mascot.png"
+              alt="FridayStag Mascot"
+              style={{
+                width: 100,
+                height: 100,
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 0 12px rgba(139, 92, 246, 0.6))',
+              }}
+            />
+          </div>
+          
+          <h2 className="section-title mb-4">
+            Join the Stag Revolution
+          </h2>
+
+          {/* Social Proof Banner */}
+          <div className="glass-card p-6 mb-8 bg-gradient-to-r from-accent-purple/20 via-accent-pink/20 to-accent-orange/20 border border-accent-purple/30">
+            <div className="flex items-center justify-center gap-6 mb-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent-orange">500+</div>
+                <div className="text-sm text-gray-300">Stags & Solo Women</div>
+              </div>
+              <div className="w-px h-12 bg-accent-purple/30"></div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent-pink">9</div>
+                <div className="text-sm text-gray-300">Major Cities</div>
+              </div>
+              <div className="w-px h-12 bg-accent-purple/30"></div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent-purple">Oct 2025</div>
+                <div className="text-sm text-gray-300">Early Access</div>
+              </div>
+            </div>
+            <p className="text-white font-semibold text-lg mb-2">
+              🔑 Early Access is Opening Soon
+            </p>
+            <p className="text-gray-300 text-sm">
+              Be among the first to experience India's solo-friendly nightlife app. Get exclusive early access to Friday Swipes, verified venues, and exclusive safety features.
+            </p>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-2 gap-4 mb-8">
+            <div className="glass-card p-5 border border-accent-purple/30 bg-gradient-to-br from-accent-purple/10 to-transparent">
+              <p className="text-white font-medium italic text-sm leading-relaxed mb-3">
+                "Finally an app that makes going out alone feel easy and safe."
+              </p>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-accent-orange to-accent-pink rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">S</span>
+                </div>
+                <div>
+                  <div className="text-accent-orange font-semibold text-sm">Shravya, 26</div>
+                  <div className="text-gray-400 text-xs">Software Manager, Bengaluru</div>
+                </div>
+              </div>
             </div>
             
-            <h2 className="section-title mb-3">
-              Join the Stag Revolution
-            </h2>
-
-            {/* User testimonials */}
-            <div className="space-y-3 mb-4">
-              <div className="glass-card p-4 border border-accent-purple/30 bg-gradient-to-r from-accent-purple/10 to-accent-pink/10">
-                <p className="text-white font-medium italic text-base leading-relaxed">
-                  "Finally an app that makes going out alone feel easy and safe."
-                </p>
-                <p className="text-accent-orange font-semibold mt-2 text-sm">— Shravya, 26, Bengaluru (Software Manager)</p>
-              </div>
-              
-              <div className="glass-card p-4 border border-accent-pink/30 bg-gradient-to-r from-accent-pink/10 to-accent-orange/10">
-                <p className="text-white font-medium italic text-base leading-relaxed">
-                  "I got into a premium bar as a stag—Friday match made my weekend!"
-                </p>
-                <p className="text-accent-purple font-semibold mt-2 text-sm">— Akash, 28, Hyderabad (Growth Marketer)</p>
+            <div className="glass-card p-5 border border-accent-pink/30 bg-gradient-to-br from-accent-pink/10 to-transparent">
+              <p className="text-white font-medium italic text-sm leading-relaxed mb-3">
+                "I got into a premium bar as a stag—Friday match made my weekend!"
+              </p>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-accent-purple to-accent-orange rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">A</span>
+                </div>
+                <div>
+                  <div className="text-accent-purple font-semibold text-sm">Akash, 28</div>
+                  <div className="text-gray-400 text-xs">Growth Marketer, Hyderabad</div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Compelling CTA */}
-            <div className="mb-4 p-3 bg-gradient-to-r from-accent-purple/20 to-accent-pink/20 rounded-lg border border-accent-purple/30">
-              <p className="text-white font-semibold text-base mb-1">
-                🔑 Early Access is Opening Soon
-              </p>
-              <p className="text-gray-300 text-xs">
-                500+ stags / solo women have already signed up. Get exclusive early access in October 2025.
-              </p>
-              <p className="text-accent-orange font-medium text-xs mt-1">
-                Be first. Be stag. Be welcome.
-              </p>
-            </div>
-
-            <p className="section-subtitle text-sm">
-              Be among the first to experience India's solo-friendly nightlife app. Get early access to Friday Swipes, verified venues, and exclusive safety features. Always free, always private.
+        {/* Form Section */}
+        <div className="glass-card p-8 md:p-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Ready to Join?</h3>
+            <p className="text-gray-300 text-sm">
+              Always free, always private. Be first. Be stag. Be welcome.
+            </p>
+            <p className="text-accent-orange text-xs mt-2">
+              Feel free to drop your LinkedIn Profile in the comments field.
             </p>
           </div>
 
