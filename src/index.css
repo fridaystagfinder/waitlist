@@ -851,3 +851,41 @@ body {
 .main-content {
   padding-bottom: 80px;
 }
+
+/* Neon Flicker Animation */
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; filter: brightness(1.1) drop-shadow(0 0 24px #0ff) drop-shadow(0 0 48px #f0f); }
+  2% { opacity: 0.8; filter: brightness(0.7) drop-shadow(0 0 8px #0ff); }
+  4% { opacity: 1; filter: brightness(1.2) drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #f0f); }
+  8% { opacity: 0.9; filter: brightness(0.8) drop-shadow(0 0 12px #0ff); }
+  10% { opacity: 1; filter: brightness(1.1) drop-shadow(0 0 24px #0ff) drop-shadow(0 0 48px #f0f); }
+  11% { opacity: 0.7; filter: brightness(0.6) drop-shadow(0 0 4px #0ff); }
+  12% { opacity: 1; filter: brightness(1.2) drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #f0f); }
+}
+
+.logo-full span {
+  animation: neonFlicker 2.5s infinite;
+}
+
+/* Tagline Color Cycling */
+@keyframes taglineCycle {
+  0% { color: #00fff7; }
+  25% { color: #f472b6; }
+  50% { color: #f97316; }
+  75% { color: #fff; }
+  100% { color: #00fff7; }
+}
+
+.logo-full span span, .logo-full .logo-tagline, .logo-full div span {
+  animation: taglineCycle 6s linear infinite;
+}
+
+/* Mascot Pulse Glow */
+@keyframes mascotPulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #f0f); }
+  50% { filter: drop-shadow(0 0 48px #0ff) drop-shadow(0 0 96px #f0f); }
+}
+
+.logo-full img, .logo-mascot img {
+  animation: mascotPulseGlow 3s ease-in-out infinite;
+}
