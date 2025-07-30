@@ -11,9 +11,9 @@ export function InvestorCTA() {
               <Users className="w-4 h-4 text-white" />
             </div>
             <div className="text-sm flex items-center">
-              <span className="text-white font-medium">Pre-Seed Funding: Investors Welcome</span>
-              <ArrowRight className="w-3 h-3 text-accent-purple mx-2" />
-              <span className="text-gray-300">Connect with the Founder</span>
+              <span className="text-white font-medium">Pre-Seed Funding: Investors Welcome.</span>
+              <span className="text-gray-300 ml-2">Connect with the Founder</span>
+              <ArrowRight className="w-3 h-3 text-accent-purple ml-2" />
             </div>
           </div>
           
