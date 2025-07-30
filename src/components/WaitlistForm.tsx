@@ -186,11 +186,11 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
               <p className="text-white font-medium italic text-sm leading-relaxed mb-3">
                 "Finally an app that makes going out alone feel easy and safe."
               </p>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-accent-orange to-accent-pink rounded-full flex items-center justify-center">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-accent-orange to-accent-pink rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-xs font-bold">S</span>
                 </div>
-                <div>
+                <div className="text-left">
                   <div className="text-accent-orange font-semibold text-sm">Shravya, 26</div>
                   <div className="text-gray-400 text-xs">Software Manager, Bengaluru</div>
                 </div>
@@ -201,11 +201,11 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
               <p className="text-white font-medium italic text-sm leading-relaxed mb-3">
                 "I got into a premium bar as a stag—Friday match made my weekend!"
               </p>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-accent-purple to-accent-orange rounded-full flex items-center justify-center">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-accent-purple to-accent-orange rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-xs font-bold">A</span>
                 </div>
-                <div>
+                <div className="text-left">
                   <div className="text-accent-purple font-semibold text-sm">Akash, 28</div>
                   <div className="text-gray-400 text-xs">Growth Marketer, Hyderabad</div>
                 </div>

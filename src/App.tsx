@@ -53,6 +53,13 @@ function App() {
     }
   }, [activeTab]);
 
+  // Scroll to top when waitlist tab is active
+  React.useEffect(() => {
+    if (activeTab === 'waitlist') {
+      window.scrollTo(0, 0);
+    }
+  }, [activeTab]);
+
   if (showThankYou) {
     return (
       <>
