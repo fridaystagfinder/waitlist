@@ -9,22 +9,22 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
   return (
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        {/* Glowing Mascot */}
-        <div className="mb-8 flex justify-center">
-          <img
-            src="/logo-mascot.png"
-            alt="FridayStag Mascot"
-            style={{
-              width: 120,
-              height: 120,
-              objectFit: 'contain',
-              filter: 'drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #f0f)',
-            }}
-          />
-        </div>
-        
         {/* Hero Content */}
         <div className="glass-card p-8 md:p-12 mb-12 text-center">
+          {/* Glowing Mascot */}
+          <div className="mb-6 flex justify-center">
+            <img
+              src="/logo-mascot.png"
+              alt="FridayStag Mascot"
+              style={{
+                width: 80,
+                height: 80,
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.4))',
+              }}
+            />
+          </div>
+          
           <h1 className="hero-title">
             Unleash Your Stag Life!
           </h1>

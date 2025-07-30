@@ -160,7 +160,7 @@ export function PrivacyPolicy() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-accent-purple" />
-                    <span><strong>Email:</strong> <a href="mailto:fridaystagfinder@gmail.com" className="text-accent-purple hover:text-accent-orange underline">fridaystagfinder@gmail.com</a></span>
+                    <span><strong>Email:</strong> <a href="mailto:hello@fridaystag.com" className="text-accent-purple hover:text-accent-orange underline">hello@fridaystag.com</a></span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-accent-purple" />

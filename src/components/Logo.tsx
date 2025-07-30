@@ -30,21 +30,20 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
             width: size,
             height: size,
             objectFit: 'contain',
-            filter: 'drop-shadow(0 0 8px #0ff) drop-shadow(0 0 16px #f0f)',
+            filter: 'drop-shadow(0 0 4px rgba(139, 92, 246, 0.3))',
           }}
         />
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           <span
             style={{
               fontFamily: "'Pacifico', cursive",
-              fontSize: 28,
-              color: '#00fff7',
-              textShadow: '0 0 12px #0ff, 0 0 24px #f0f',
-              lineHeight: 1,
-              background: 'linear-gradient(90deg, #00fff7 60%, #f472b6 100%)',
+              fontSize: 26,
+              background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
+              lineHeight: 1,
+              fontWeight: 400,
             }}
           >
             FridayStag
@@ -52,16 +51,15 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
           <div
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontWeight: 600,
-              fontSize: 12,
-              color: '#fff',
-              marginTop: -2,
-              textShadow: '0 0 8px #0ff, 0 0 16px #f0f',
-              letterSpacing: 0.5,
+              fontSize: 11,
+              color: '#9ca3af',
+              marginTop: 1,
+              fontWeight: 500,
+              letterSpacing: 0.3,
             }}
           >
-            <span style={{ fontWeight: 400, color: '#00fff7' }}>Solo? You're </span>
-            <span style={{ fontWeight: 900, color: '#fff', letterSpacing: 1, textTransform: 'uppercase' }}>IN.</span>
+            <span style={{ color: '#8b5cf6' }}>Solo? You're </span>
+            <span style={{ fontWeight: 700, color: '#ec4899', textTransform: 'uppercase' }}>IN.</span>
           </div>
         </div>
       </div>
@@ -91,7 +89,7 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
           width: '100%',
           height: '100%',
           objectFit: 'contain',
-          filter: 'drop-shadow(0 0 8px #0ff) drop-shadow(0 0 16px #f0f)',
+          filter: 'drop-shadow(0 0 4px rgba(139, 92, 246, 0.3))',
         }}
       />
     </div>

@@ -144,23 +144,21 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
               Join the Stag Revolution
             </h2>
 
-            {/* User testimonial */}
-            <div className="glass-card p-6 mb-6 max-w-2xl mx-auto">
-              <div className="flex items-center justify-center space-x-4 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-accent-purple to-accent-pink rounded-full flex items-center justify-center">
-                  <User className="w-5 h-5 text-white" />
-                </div>
-                <div className="w-10 h-10 bg-gradient-to-r from-accent-orange to-accent-purple rounded-full flex items-center justify-center">
-                  <User className="w-5 h-5 text-white" />
-                </div>
-                <div className="w-10 h-10 bg-gradient-to-r from-accent-pink to-accent-orange rounded-full flex items-center justify-center">
-                  <User className="w-5 h-5 text-white" />
-                </div>
+            {/* User testimonials */}
+            <div className="space-y-4 mb-8">
+              <div className="glass-card p-6 border border-accent-purple/30 bg-gradient-to-r from-accent-purple/10 to-accent-pink/10">
+                <p className="text-white font-medium italic text-lg leading-relaxed">
+                  "Finally an app that makes going out alone feel easy and safe."
+                </p>
+                <p className="text-accent-orange font-semibold mt-3">— Shravya, 26, Bengaluru (Software Manager)</p>
               </div>
-              <p className="text-accent-orange font-medium italic">
-                "Finally, I can plan nights out with confidence!"
-              </p>
-              <p className="text-sm text-gray-400 mt-2">— actual beta user</p>
+              
+              <div className="glass-card p-6 border border-accent-pink/30 bg-gradient-to-r from-accent-pink/10 to-accent-orange/10">
+                <p className="text-white font-medium italic text-lg leading-relaxed">
+                  "I got into a premium bar as a stag—Friday match made my weekend!"
+                </p>
+                <p className="text-accent-purple font-semibold mt-3">— Akash, 28, Hyderabad (Growth Marketer)</p>
+              </div>
             </div>
 
             {/* Progress indicator */}

@@ -53,14 +53,14 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="mailto:fridaystagfinder@gmail.com"
+                href="mailto:hello@fridaystag.com"
                 className="social-link"
               >
                 <Mail className="w-5 h-5" />
               </a>
             </div>
             <p className="text-sm text-gray-400 mt-3">
-              fridaystagfinder@gmail.com
+              hello@fridaystag.com
             </p>
           </div>
         </div>
