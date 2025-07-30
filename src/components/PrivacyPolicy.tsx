@@ -167,7 +167,7 @@ export function PrivacyPolicy() {
                     <span><strong>Phone:</strong> +91-9985386015</span>
                   </div>
                 </div>
-                <p className="text-sm text-gray-400 mt-4">This policy is confidential and not for distribution without permission.</p>
+
                 <p className="text-sm text-gray-400">© 2025 FridayStag. All rights reserved.</p>
               </div>
             </section>
