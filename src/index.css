@@ -822,7 +822,7 @@ main {
   }
   
   /* Logo responsive adjustments */
-  .logo-full span {
+  .logo-full > div > span {
     font-size: 90px !important;
     letter-spacing: 0.6 !important;
     line-height: 1.1 !important;
@@ -847,8 +847,12 @@ main {
   
   .logo-tagline {
     display: flex !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     text-decoration: none !important;
+  }
+  
+  .logo-tagline span {
+    font-size: 14px !important;
   }
   
   .logo-full img {
@@ -1066,7 +1070,7 @@ main {
   }
   
   /* Logo adjustments for very small screens */
-  .logo-full span {
+  .logo-full > div > span {
     font-size: 80px !important;
     letter-spacing: 0.5 !important;
     line-height: 1.1 !important;
@@ -1091,8 +1095,12 @@ main {
   
   .logo-tagline {
     display: flex !important;
-    font-size: 10px !important;
+    font-size: 12px !important;
     text-decoration: none !important;
+  }
+  
+  .logo-tagline span {
+    font-size: 12px !important;
   }
   
   .logo-full img {
