@@ -70,7 +70,6 @@ export function Logo({ onClick, variant = 'full', size = 56 }: LogoProps) {
               justifyContent: 'center',
               gap: 2,
               width: '100%',
-              color: '#9ca3af',
               textAlign: 'center',
             }}
           >
