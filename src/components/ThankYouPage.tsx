@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CheckCircle, Home, Mail, Star, Users } from 'lucide-react';
+import { CheckCircle, Mail, Star, Users } from 'lucide-react';
 
 interface ThankYouPageProps {
   userName: string;
@@ -65,21 +65,17 @@ export function ThankYouPage({ userName, onBackToHome }: ThankYouPageProps) {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Contact Info */}
         <div className="space-y-4">
-          <button
-            onClick={onBackToHome}
-            className="cta-button"
-          >
-            <Home className="w-5 h-5" />
-            <span>Back to Home</span>
-          </button>
-          
           <p className="text-sm text-gray-500">
             Questions? Reach out to us at{' '}
             <a href="mailto:hello@fridaystag.com" className="text-purple-400 hover:text-orange-400 underline">
               hello@fridaystag.com
             </a>
+          </p>
+          
+          <p className="text-xs text-gray-600">
+            Use the navigation above to explore more about FridayStag!
           </p>
         </div>
       </div>

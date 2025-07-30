@@ -827,7 +827,7 @@ main {
     letter-spacing: 0.3 !important;
     line-height: 1.5 !important;
     margin-bottom: 4px !important;
-    font-family: "'Pacifico', cursive" !important;
+    font-family: 'Pacifico', cursive !important;
     font-weight: 600 !important;
     text-transform: none !important;
     text-decoration: none !important;
@@ -844,13 +844,7 @@ main {
     height: 64px !important;
   }
   
-  .logo-full div span {
-    font-size: 10px !important;
-  }
-  
-  .logo-full div span span {
-    font-size: 10px !important;
-  }
+
   
   .logo-tagline {
     display: flex !important;
@@ -1092,7 +1086,7 @@ main {
     letter-spacing: 0.3 !important;
     line-height: 1.5 !important;
     margin-bottom: 3px !important;
-    font-family: "'Pacifico', cursive" !important;
+    font-family: 'Pacifico', cursive !important;
     font-weight: 600 !important;
     text-transform: none !important;
     text-decoration: none !important;
@@ -1109,13 +1103,7 @@ main {
     height: 60px !important;
   }
   
-  .logo-full div span {
-    font-size: 9px !important;
-  }
-  
-  .logo-full div span span {
-    font-size: 9px !important;
-  }
+
   
   .logo-tagline {
     display: flex !important;
@@ -1367,22 +1355,7 @@ main {
   12% { opacity: 1; filter: brightness(1.2) drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #f0f); }
 }
 
-.logo-full span {
-  animation: neonFlicker 2.5s infinite;
-}
 
-/* Tagline Color Cycling */
-@keyframes taglineCycle {
-  0% { color: #00fff7; }
-  25% { color: #f472b6; }
-  50% { color: #f97316; }
-  75% { color: #fff; }
-  100% { color: #00fff7; }
-}
-
-.logo-full span span, .logo-full .logo-tagline, .logo-full div span {
-  animation: taglineCycle 6s linear infinite;
-}
 
 /* Mascot Pulse Glow */
 @keyframes mascotPulseGlow {

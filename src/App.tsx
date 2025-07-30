@@ -42,10 +42,22 @@ function App() {
 
   if (showThankYou) {
     return (
-      <>
-        <ThankYouPage userName={userName} onBackToHome={handleBackToHome} />
-        <InvestorCTA />
-      </>
+      <div className="min-h-screen text-white overflow-x-hidden">
+        <div className="nightlife-bg">
+          <div className="city-lights"></div>
+        </div>
+        <div className="relative z-10 pb-20">
+          <header className="header">
+            <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+              <Logo onClick={handleLogoClick} />
+              <TabNavigation activeTab="home" onTabChange={handleNavigation} />
+            </div>
+          </header>
+          <ThankYouPage userName={userName} onBackToHome={handleBackToHome} />
+          <Footer onNavigate={handleNavigation} />
+          <InvestorCTA />
+        </div>
+      </div>
     );
   }
 
