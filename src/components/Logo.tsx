@@ -33,17 +33,18 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
             filter: 'drop-shadow(0 0 4px rgba(139, 92, 246, 0.3))',
           }}
         />
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
           <span
             style={{
               fontFamily: "'Pacifico', cursive",
-              fontSize: 26,
+              fontSize: 32,
               background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              lineHeight: 1,
-              fontWeight: 400,
+              lineHeight: 1.1,
+              fontWeight: 600,
+              letterSpacing: 0.5,
             }}
           >
             FridayStag
@@ -51,11 +52,13 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
           <div
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: 11,
+              fontSize: 12,
               color: '#9ca3af',
-              marginTop: 1,
+              marginTop: 2,
               fontWeight: 500,
               letterSpacing: 0.3,
+              textAlign: 'left',
+              width: '100%',
             }}
           >
             <span style={{ color: '#8b5cf6' }}>Solo? You're </span>

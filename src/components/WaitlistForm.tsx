@@ -140,6 +140,20 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
       <div className="container mx-auto max-w-3xl">
         <div className="glass-card p-8 md:p-12">
           <div className="text-center mb-8">
+            {/* Glowing Mascot */}
+            <div className="mb-6 flex justify-center">
+              <img
+                src="/logo-mascot.png"
+                alt="FridayStag Mascot"
+                style={{
+                  width: 80,
+                  height: 80,
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.4))',
+                }}
+              />
+            </div>
+            
             <h2 className="section-title mb-4">
               Join the Stag Revolution
             </h2>
