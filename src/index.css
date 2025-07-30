@@ -861,7 +861,8 @@ main {
   }
   
   .logo-full img {
-    display: none !important;
+    width: 64px !important;
+    height: 64px !important;
   }
   
   .nav-tabs {
@@ -1114,7 +1115,8 @@ main {
   }
   
   .logo-full img {
-    display: none !important;
+    width: 60px !important;
+    height: 60px !important;
   }
   
   .nav-tab {
