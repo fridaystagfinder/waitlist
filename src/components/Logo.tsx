@@ -30,7 +30,7 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
             width: size,
             height: size,
             objectFit: 'contain',
-            filter: 'drop-shadow(0 0 4px rgba(139, 92, 246, 0.3))',
+            filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.5))',
           }}
         />
         <div style={{ 
@@ -38,7 +38,7 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
           flexDirection: 'column', 
           alignItems: 'flex-start', 
           justifyContent: 'center',
-          minWidth: 0, // Allow text to shrink if needed
+          minWidth: 0,
         }}>
           <div style={{
             display: 'flex',
@@ -48,51 +48,47 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
           }}>
             <span
               style={{
-                fontFamily: "'Orbitron', monospace",
-                fontSize: 28,
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f97316 100%)',
+                fontFamily: "'Pacifico', cursive",
+                fontSize: 32,
+                background: 'linear-gradient(135deg, #ff6b6b 0%, #feca57 25%, #48dbfb 50%, #ff9ff3 75%, #ff6b6b 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 lineHeight: 1,
-                fontWeight: 700,
-                letterSpacing: 1,
-                textShadow: '0 0 8px rgba(139, 92, 246, 0.3)',
-                textTransform: 'uppercase',
+                fontWeight: 600,
+                letterSpacing: 0.5,
+                textShadow: '0 0 12px rgba(255, 107, 107, 0.4)',
+                filter: 'drop-shadow(0 0 4px rgba(255, 107, 107, 0.3))',
               }}
             >
               FridayStag
             </span>
             <div
               style={{
-                fontFamily: 'Inter, sans-serif',
-                fontSize: 10,
-                marginTop: 2,
+                fontFamily: "'Pacifico', cursive",
+                fontSize: 14,
+                marginTop: 1,
                 fontWeight: 600,
-                letterSpacing: 0.5,
+                letterSpacing: 0.3,
                 display: 'flex',
                 alignItems: 'center',
-                gap: 3,
+                gap: 2,
                 width: '100%',
                 justifyContent: 'flex-start',
-              }}
-            >
-              <span style={{ 
-                color: '#8b5cf6', 
-                fontWeight: 500,
-                fontSize: 9,
-              }}>Solo? You're</span>
-              <span style={{ 
-                fontWeight: 800, 
-                color: '#ec4899', 
-                textTransform: 'uppercase',
-                fontSize: 10,
-                letterSpacing: 1,
-                textShadow: '0 0 4px rgba(236, 72, 153, 0.5)',
-                background: 'linear-gradient(135deg, #ec4899, #f97316)',
+                background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
+                textShadow: '0 0 8px rgba(139, 92, 246, 0.4)',
+              }}
+            >
+              <span>Solo? You're</span>
+              <span style={{ 
+                fontWeight: 800,
+                fontSize: 16,
+                letterSpacing: 0.5,
+                textShadow: '0 0 8px rgba(236, 72, 153, 0.6)',
+                filter: 'drop-shadow(0 0 2px rgba(236, 72, 153, 0.4))',
               }}>IN.</span>
             </div>
           </div>
@@ -124,7 +120,7 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
           width: '100%',
           height: '100%',
           objectFit: 'contain',
-          filter: 'drop-shadow(0 0 4px rgba(139, 92, 246, 0.3))',
+          filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.5))',
         }}
       />
     </div>
