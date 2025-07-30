@@ -824,8 +824,8 @@ main {
   /* Logo responsive adjustments */
   .logo-full > div > span {
     font-size: 90px !important;
-    letter-spacing: 0.6 !important;
-    line-height: 1.1 !important;
+    letter-spacing: 0.3 !important;
+    line-height: 1.5 !important;
     margin-bottom: 4px !important;
     font-family: "'Pacifico', cursive" !important;
     font-weight: 600 !important;
@@ -835,6 +835,8 @@ main {
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .logo-full img {
@@ -852,12 +854,21 @@ main {
   
   .logo-tagline {
     display: flex !important;
-    font-size: 10px !important;
+    font-size: 11px !important;
     text-decoration: none !important;
+    font-family: 'Inter, sans-serif' !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 2px !important;
   }
   
   .logo-tagline span {
-    font-size: 10px !important;
+    font-size: 11px !important;
   }
   
   .logo-full img {
@@ -1078,8 +1089,8 @@ main {
   /* Logo adjustments for very small screens */
   .logo-full > div > span {
     font-size: 80px !important;
-    letter-spacing: 0.5 !important;
-    line-height: 1.1 !important;
+    letter-spacing: 0.3 !important;
+    line-height: 1.5 !important;
     margin-bottom: 3px !important;
     font-family: "'Pacifico', cursive" !important;
     font-weight: 600 !important;
@@ -1089,6 +1100,8 @@ main {
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .logo-full img {
@@ -1106,12 +1119,21 @@ main {
   
   .logo-tagline {
     display: flex !important;
-    font-size: 8px !important;
+    font-size: 9px !important;
     text-decoration: none !important;
+    font-family: 'Inter, sans-serif' !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 2px !important;
   }
   
   .logo-tagline span {
-    font-size: 8px !important;
+    font-size: 9px !important;
   }
   
   .logo-full img {

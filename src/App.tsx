@@ -19,6 +19,7 @@ function App() {
   const handleWaitlistSuccess = (name: string) => {
     setUserName(name);
     setShowThankYou(true);
+    window.scrollTo(0, 0);
   };
 
   const handleBackToHome = () => {
