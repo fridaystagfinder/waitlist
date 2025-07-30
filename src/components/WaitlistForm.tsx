@@ -96,23 +96,26 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
     setIsSubmitting(true);
 
     try {
+      const submissionData = {
+        name: formData.name.trim(),
+        email: formData.email.trim().toLowerCase(),
+        phone: formData.phone.trim(),
+        city: formData.city === 'Other' ? formData.customCity.trim() : formData.city,
+        comments: formData.comments.trim() || null,
+        consent_given: formData.consent,
+      };
+
       const response = await fetch(`${supabaseUrl}/functions/v1/waitlist`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${anonKey}`,
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          city: formData.city === 'Other' ? formData.customCity : formData.city,
-          comments: formData.comments,
-        }),
+        body: JSON.stringify(submissionData),
       });
 
       if (response.ok) {
-        onSuccess(formData.name);
+        onSuccess(formData.name.trim());
       } else {
         const errorData = await response.json();
         setSubmitError(errorData.error || 'Failed to join waitlist. Please try again.');
