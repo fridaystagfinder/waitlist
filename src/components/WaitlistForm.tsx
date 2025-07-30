@@ -187,6 +187,17 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <p className="section-subtitle">
               Be among the first to experience India's solo-friendly nightlife app. Get early access to Friday Swipes, verified venues, and exclusive safety features. Always free, always private.
             </p>
+            
+            {/* Compelling CTA */}
+            <div className="mt-6 p-4 bg-gradient-to-r from-accent-purple/20 to-accent-pink/20 rounded-lg border border-accent-purple/30">
+              <p className="text-white font-semibold text-lg mb-2">
+                🚀 Ready to transform your Friday nights?
+              </p>
+              <p className="text-gray-300 text-sm">
+                Join <span className="text-accent-orange font-bold">2,847+ solos</span> already on the waitlist. 
+                Early access starts in <span className="text-accent-pink font-bold">March 2025</span>.
+              </p>
+            </div>
           </div>
 
           <div className="form-container">

@@ -37,14 +37,15 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
           <span
             style={{
               fontFamily: "'Pacifico', cursive",
-              fontSize: 32,
+              fontSize: 30,
               background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              lineHeight: 1.1,
+              lineHeight: 1.2,
               fontWeight: 600,
-              letterSpacing: 0.5,
+              letterSpacing: 0.3,
+              textShadow: '0 0 8px rgba(139, 92, 246, 0.3)',
             }}
           >
             FridayStag
@@ -52,17 +53,26 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
           <div
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: 12,
-              color: '#9ca3af',
-              marginTop: 2,
-              fontWeight: 500,
-              letterSpacing: 0.3,
+              fontSize: 11,
+              marginTop: 1,
+              fontWeight: 600,
+              letterSpacing: 0.2,
               textAlign: 'left',
               width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 2,
             }}
           >
-            <span style={{ color: '#8b5cf6' }}>Solo? You're </span>
-            <span style={{ fontWeight: 700, color: '#ec4899', textTransform: 'uppercase' }}>IN.</span>
+            <span style={{ color: '#8b5cf6', fontWeight: 500 }}>Solo? You're</span>
+            <span style={{ 
+              fontWeight: 800, 
+              color: '#ec4899', 
+              textTransform: 'uppercase',
+              fontSize: 12,
+              letterSpacing: 0.5,
+              textShadow: '0 0 4px rgba(236, 72, 153, 0.5)'
+            }}>IN.</span>
           </div>
         </div>
       </div>

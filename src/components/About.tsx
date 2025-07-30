@@ -6,6 +6,20 @@ export function About() {
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="glass-card p-8 md:p-12 text-center mb-12">
+          {/* Glowing Mascot */}
+          <div className="mb-6 flex justify-center">
+            <img
+              src="/logo-mascot.png"
+              alt="FridayStag Mascot"
+              style={{
+                width: 80,
+                height: 80,
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.4))',
+              }}
+            />
+          </div>
+          
           <h2 className="section-title">
             Why FridayStag?
           </h2>

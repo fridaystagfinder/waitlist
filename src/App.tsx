@@ -37,12 +37,21 @@ function App() {
       if (target.closest('a[href="/privacy-policy"]')) {
         e.preventDefault();
         setActiveTab('privacy');
+        // Scroll to top when navigating to privacy policy
+        window.scrollTo(0, 0);
       }
     };
 
     document.addEventListener('click', handlePrivacyClick);
     return () => document.removeEventListener('click', handlePrivacyClick);
   }, []);
+
+  // Scroll to top when privacy tab is active
+  React.useEffect(() => {
+    if (activeTab === 'privacy') {
+      window.scrollTo(0, 0);
+    }
+  }, [activeTab]);
 
   if (showThankYou) {
     return (
