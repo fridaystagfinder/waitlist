@@ -823,10 +823,10 @@ main {
   
   /* Logo responsive adjustments */
   .logo-full > div > span {
-    font-size: 90px !important;
+    font-size: 28px !important;
     letter-spacing: 0.3 !important;
     line-height: 1.5 !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 2px !important;
     font-family: 'Pacifico', cursive !important;
     font-weight: 600 !important;
     text-transform: none !important;
@@ -848,7 +848,7 @@ main {
   
   .logo-tagline {
     display: flex !important;
-    font-size: 11px !important;
+    font-size: 10px !important;
     text-decoration: none !important;
     font-family: 'Inter, sans-serif' !important;
     font-weight: 600 !important;
@@ -862,7 +862,7 @@ main {
   }
   
   .logo-tagline span {
-    font-size: 11px !important;
+    font-size: 10px !important;
   }
   
   .logo-full img {
@@ -1082,10 +1082,10 @@ main {
   
   /* Logo adjustments for very small screens */
   .logo-full > div > span {
-    font-size: 80px !important;
+    font-size: 24px !important;
     letter-spacing: 0.3 !important;
     line-height: 1.5 !important;
-    margin-bottom: 3px !important;
+    margin-bottom: 2px !important;
     font-family: 'Pacifico', cursive !important;
     font-weight: 600 !important;
     text-transform: none !important;
@@ -1107,7 +1107,7 @@ main {
   
   .logo-tagline {
     display: flex !important;
-    font-size: 9px !important;
+    font-size: 8px !important;
     text-decoration: none !important;
     font-family: 'Inter, sans-serif' !important;
     font-weight: 600 !important;
@@ -1121,7 +1121,7 @@ main {
   }
   
   .logo-tagline span {
-    font-size: 9px !important;
+    font-size: 8px !important;
   }
   
   .logo-full img {
