@@ -823,10 +823,10 @@ main {
   
   /* Logo responsive adjustments */
   .logo-full span {
-    font-size: 52px !important;
+    font-size: 64px !important;
     letter-spacing: 0.3 !important;
     line-height: 1.2 !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 0 !important;
     font-family: 'Inter, sans-serif' !important;
     font-weight: 800 !important;
     text-transform: uppercase !important;
@@ -844,9 +844,7 @@ main {
   }
   
   .logo-tagline {
-    display: flex !important;
-    font-size: 8px !important;
-    text-decoration: none !important;
+    display: none !important;
   }
   
   .logo-full img {
@@ -1066,10 +1064,10 @@ main {
   
   /* Logo adjustments for very small screens */
   .logo-full span {
-    font-size: 44px !important;
+    font-size: 56px !important;
     letter-spacing: 0.2 !important;
     line-height: 1.2 !important;
-    margin-bottom: 3px !important;
+    margin-bottom: 0 !important;
     font-family: 'Inter, sans-serif' !important;
     font-weight: 800 !important;
     text-transform: uppercase !important;
@@ -1087,9 +1085,7 @@ main {
   }
   
   .logo-tagline {
-    display: flex !important;
-    font-size: 7px !important;
-    text-decoration: none !important;
+    display: none !important;
   }
   
   .logo-full img {
