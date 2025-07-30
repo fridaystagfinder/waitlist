@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Users, Linkedin, X } from 'lucide-react';
+import { ExternalLink, Users, Linkedin, X, ArrowRight } from 'lucide-react';
 
 export function InvestorCTA() {
   return (
@@ -10,9 +10,10 @@ export function InvestorCTA() {
             <div className="w-8 h-8 bg-gradient-to-r from-accent-purple to-accent-pink rounded-lg flex items-center justify-center">
               <Users className="w-4 h-4 text-white" />
             </div>
-            <div className="text-sm">
-              <span className="text-white font-medium">Pre-Seed Funding: Investors Welcome.</span>
-              <span className="text-gray-300 ml-2">Connect with the Founder.</span>
+            <div className="text-sm flex items-center">
+              <span className="text-white font-medium">Pre-Seed Funding: Investors Welcome</span>
+              <ArrowRight className="w-3 h-3 text-accent-purple mx-2" />
+              <span className="text-gray-300">Connect with the Founder</span>
             </div>
           </div>
           

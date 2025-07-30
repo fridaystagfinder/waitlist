@@ -8,6 +8,7 @@ import { Logo } from './components/Logo';
 import { Footer } from './components/Footer';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { InvestorCTA } from './components/InvestorCTA';
+import { FounderQuote } from './components/FounderQuote';
 
 export type ActiveTab = 'home' | 'about' | 'waitlist' | 'privacy';
 
@@ -103,7 +104,12 @@ function App() {
         </header>
 
         <main className="pt-20">
-          {activeTab === 'home' && <Hero onJoinWaitlist={() => handleNavigation('waitlist')} />}
+          {activeTab === 'home' && (
+            <>
+              <Hero onJoinWaitlist={() => handleNavigation('waitlist')} />
+              <FounderQuote />
+            </>
+          )}
           {activeTab === 'about' && <About />}
           {activeTab === 'waitlist' && <WaitlistForm onSuccess={handleWaitlistSuccess} />}
         </main>

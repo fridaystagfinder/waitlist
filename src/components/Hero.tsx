@@ -29,7 +29,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             Unleash Your Stag Life!
           </h1>
           <p className="hero-subtitle">
-            India's first platform for solos. Verified venues. Friday-only connections. Always free. Safe. Soulful.
+            India's first stag-friendly platform for solos. Verified Stag-friendly venues. Friday-Swipe exclusive connections. Work from Cafe Options. Always free for users. Safe & Secured for women. Soulful for solos.
           </p>
           
           {/* "Tired of this?" Section */}
