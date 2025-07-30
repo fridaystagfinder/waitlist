@@ -6,9 +6,9 @@ interface LogoProps {
   size?: number; // px, for mascot; full logo is responsive
 }
 
-export function Logo({ onClick, variant = 'mascot', size = 48 }: LogoProps) {
+export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
   if (variant === 'full') {
-    // Full logo for hero/large spaces
+    // Full logo for header - mascot + text + tagline
     return (
       <div
         className="logo-container logo-full"
@@ -16,12 +16,10 @@ export function Logo({ onClick, variant = 'mascot', size = 48 }: LogoProps) {
         role="button"
         tabIndex={0}
         style={{
-          maxWidth: 420,
-          width: '100%',
           cursor: 'pointer',
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
+          gap: 12,
           userSelect: 'none',
         }}
       >
@@ -29,24 +27,20 @@ export function Logo({ onClick, variant = 'mascot', size = 48 }: LogoProps) {
           src="/logo-mascot.png"
           alt="FridayStag Mascot"
           style={{
-            width: 120,
-            height: 120,
+            width: size,
+            height: size,
             objectFit: 'contain',
-            filter: 'drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #f0f)',
-            marginBottom: 8,
+            filter: 'drop-shadow(0 0 8px #0ff) drop-shadow(0 0 16px #f0f)',
           }}
         />
-        <div style={{ textAlign: 'center', width: '100%' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           <span
             style={{
               fontFamily: "'Pacifico', cursive",
-              fontSize: 54,
+              fontSize: 28,
               color: '#00fff7',
-              textShadow: '0 0 24px #0ff, 0 0 48px #f0f',
-              display: 'block',
-              lineHeight: 1.1,
-              letterSpacing: 1,
-              marginBottom: 0,
+              textShadow: '0 0 12px #0ff, 0 0 24px #f0f',
+              lineHeight: 1,
               background: 'linear-gradient(90deg, #00fff7 60%, #f472b6 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -55,35 +49,19 @@ export function Logo({ onClick, variant = 'mascot', size = 48 }: LogoProps) {
           >
             FridayStag
           </span>
-          {/* SVG curve for underline */}
-          <svg width="220" height="18" viewBox="0 0 220 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block', margin: '0 auto -2px auto' }}>
-            <path d="M10 10 Q110 28 210 10" stroke="#00fff7" strokeWidth="3" fill="none" filter="url(#glow)" />
-            <defs>
-              <filter id="glow" x="-10" y="-10" width="240" height="40">
-                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                <feMerge>
-                  <feMergeNode in="coloredBlur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-          </svg>
           <div
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontWeight: 700,
-              fontSize: 22,
+              fontWeight: 600,
+              fontSize: 12,
               color: '#fff',
-              marginTop: 0,
-              textShadow: '0 0 12px #0ff, 0 0 24px #f0f',
-              letterSpacing: 1,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
+              marginTop: -2,
+              textShadow: '0 0 8px #0ff, 0 0 16px #f0f',
+              letterSpacing: 0.5,
             }}
           >
-            <span style={{ fontWeight: 400, color: '#00fff7', letterSpacing: 0.5 }}>Solo? You’re <span style={{ fontWeight: 900, color: '#fff', letterSpacing: 2, textTransform: 'uppercase', fontSize: 24 }}>IN.</span></span>
+            <span style={{ fontWeight: 400, color: '#00fff7' }}>Solo? You're </span>
+            <span style={{ fontWeight: 900, color: '#fff', letterSpacing: 1, textTransform: 'uppercase' }}>IN.</span>
           </div>
         </div>
       </div>

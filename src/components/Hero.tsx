@@ -1,6 +1,5 @@
 import React from 'react';
 import { MapPin, Users, Shield, ArrowRight } from 'lucide-react';
-import { Logo } from './Logo';
 
 interface HeroProps {
   onJoinWaitlist: () => void;
@@ -10,9 +9,18 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
   return (
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        {/* Full Logo */}
-        <div className="mb-6 flex justify-center">
-          <Logo variant="full" />
+        {/* Glowing Mascot */}
+        <div className="mb-8 flex justify-center">
+          <img
+            src="/logo-mascot.png"
+            alt="FridayStag Mascot"
+            style={{
+              width: 120,
+              height: 120,
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #f0f)',
+            }}
+          />
         </div>
         
         {/* Hero Content */}
