@@ -1,7 +1,11 @@
 import React from 'react';
 import { Instagram, Mail, MapPin, X } from 'lucide-react';
 
-export function Footer() {
+interface FooterProps {
+  onNavigate?: (tab: 'home' | 'about' | 'waitlist' | 'privacy') => void;
+}
+
+export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="footer">
       <div className="container mx-auto px-4">
@@ -13,7 +17,7 @@ export function Footer() {
               Unleash Your Stag Life. Built for solos, not groups.
             </p>
             <div className="flex items-center space-x-2 text-sm mt-2">
-              <MapPin className="w-4 h-4" />
+              <MapPin className="w-4 h-4 text-purple-400" />
               <span>Hyderabad • Delhi • Bengaluru • Pune • Mumbai • Goa • Kolkata • Chennai • Vizag</span>
             </div>
             <p className="text-xs text-gray-500 mt-3">
@@ -25,10 +29,30 @@ export function Footer() {
           <div className="footer-section">
             <h4>Quick Links</h4>
             <nav className="space-y-2">
-              <a href="#home" className="block hover:text-purple-400 transition-colors">Home</a>
-              <a href="#about" className="block hover:text-purple-400 transition-colors">Why</a>
-              <a href="#waitlist" className="block hover:text-purple-400 transition-colors">Waitlist</a>
-              <a href="/privacy-policy" className="block hover:text-purple-400 transition-colors">Privacy Policy</a>
+              <button 
+                onClick={() => onNavigate?.('home')}
+                className="block hover:text-purple-400 transition-colors text-left w-full bg-transparent border-none cursor-pointer"
+              >
+                Home
+              </button>
+              <button 
+                onClick={() => onNavigate?.('about')}
+                className="block hover:text-purple-400 transition-colors text-left w-full bg-transparent border-none cursor-pointer"
+              >
+                Why
+              </button>
+              <button 
+                onClick={() => onNavigate?.('waitlist')}
+                className="block hover:text-purple-400 transition-colors text-left w-full bg-transparent border-none cursor-pointer"
+              >
+                Waitlist
+              </button>
+              <button 
+                onClick={() => onNavigate?.('privacy')}
+                className="block hover:text-purple-400 transition-colors text-left w-full bg-transparent border-none cursor-pointer"
+              >
+                Privacy Policy
+              </button>
             </nav>
           </div>
 

@@ -30,21 +30,12 @@ function App() {
     setActiveTab('home');
   };
 
-  // Handle privacy policy navigation from footer links
-  React.useEffect(() => {
-    const handlePrivacyClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.closest('a[href="/privacy-policy"]')) {
-        e.preventDefault();
-        setActiveTab('privacy');
-        // Scroll to top when navigating to privacy policy
-        window.scrollTo(0, 0);
-      }
-    };
+  const handleNavigation = (tab: 'home' | 'about' | 'waitlist' | 'privacy') => {
+    setActiveTab(tab);
+    window.scrollTo(0, 0);
+  };
 
-    document.addEventListener('click', handlePrivacyClick);
-    return () => document.removeEventListener('click', handlePrivacyClick);
-  }, []);
+
 
   // Scroll to top when privacy tab is active
   React.useEffect(() => {
@@ -88,7 +79,7 @@ function App() {
             </div>
           </header>
           <PrivacyPolicy />
-          <Footer />
+          <Footer onNavigate={handleNavigation} />
           <InvestorCTA />
         </div>
       </div>
@@ -116,7 +107,7 @@ function App() {
           {activeTab === 'waitlist' && <WaitlistForm onSuccess={handleWaitlistSuccess} />}
         </main>
 
-        <Footer />
+        <Footer onNavigate={handleNavigation} />
       </div>
       
       <InvestorCTA />

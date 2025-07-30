@@ -653,8 +653,11 @@ main {
   line-height: 1.6;
 }
 
-.footer-section a:hover {
+.footer-section a:hover,
+.footer-section button:hover {
   color: var(--accent-purple);
+  transform: translateX(4px);
+  transition: all 0.3s ease;
 }
 
 .social-links {
@@ -680,6 +683,7 @@ main {
   background: var(--accent-purple);
   color: white;
   transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
 }
 
 .footer-bottom {
