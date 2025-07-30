@@ -33,46 +33,68 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
             filter: 'drop-shadow(0 0 4px rgba(139, 92, 246, 0.3))',
           }}
         />
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
-          <span
-            style={{
-              fontFamily: "'Pacifico', cursive",
-              fontSize: 30,
-              background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              lineHeight: 1.2,
-              fontWeight: 600,
-              letterSpacing: 0.3,
-              textShadow: '0 0 8px rgba(139, 92, 246, 0.3)',
-            }}
-          >
-            FridayStag
-          </span>
-          <div
-            style={{
-              fontFamily: 'Inter, sans-serif',
-              fontSize: 11,
-              marginTop: 1,
-              fontWeight: 600,
-              letterSpacing: 0.2,
-              textAlign: 'left',
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 2,
-            }}
-          >
-            <span style={{ color: '#8b5cf6', fontWeight: 500 }}>Solo? You're</span>
-            <span style={{ 
-              fontWeight: 800, 
-              color: '#ec4899', 
-              textTransform: 'uppercase',
-              fontSize: 12,
-              letterSpacing: 0.5,
-              textShadow: '0 0 4px rgba(236, 72, 153, 0.5)'
-            }}>IN.</span>
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'flex-start', 
+          justifyContent: 'center',
+          minWidth: 0, // Allow text to shrink if needed
+        }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            width: '100%',
+          }}>
+            <span
+              style={{
+                fontFamily: "'Orbitron', monospace",
+                fontSize: 28,
+                background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f97316 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                lineHeight: 1,
+                fontWeight: 700,
+                letterSpacing: 1,
+                textShadow: '0 0 8px rgba(139, 92, 246, 0.3)',
+                textTransform: 'uppercase',
+              }}
+            >
+              FridayStag
+            </span>
+            <div
+              style={{
+                fontFamily: 'Inter, sans-serif',
+                fontSize: 10,
+                marginTop: 2,
+                fontWeight: 600,
+                letterSpacing: 0.5,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 3,
+                width: '100%',
+                justifyContent: 'flex-start',
+              }}
+            >
+              <span style={{ 
+                color: '#8b5cf6', 
+                fontWeight: 500,
+                fontSize: 9,
+              }}>Solo? You're</span>
+              <span style={{ 
+                fontWeight: 800, 
+                color: '#ec4899', 
+                textTransform: 'uppercase',
+                fontSize: 10,
+                letterSpacing: 1,
+                textShadow: '0 0 4px rgba(236, 72, 153, 0.5)',
+                background: 'linear-gradient(135deg, #ec4899, #f97316)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}>IN.</span>
+            </div>
           </div>
         </div>
       </div>

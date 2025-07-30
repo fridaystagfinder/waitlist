@@ -191,11 +191,13 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             {/* Compelling CTA */}
             <div className="mt-6 p-4 bg-gradient-to-r from-accent-purple/20 to-accent-pink/20 rounded-lg border border-accent-purple/30">
               <p className="text-white font-semibold text-lg mb-2">
-                🚀 Ready to transform your Friday nights?
+                🔑 Early Access is Opening Soon
               </p>
               <p className="text-gray-300 text-sm">
-                Join <span className="text-accent-orange font-bold">2,847+ solos</span> already on the waitlist. 
-                Early access starts in <span className="text-accent-pink font-bold">March 2025</span>.
+                500+ stags / solo women have already signed up. Get exclusive early access in October 2025 across all 9 major Indian cities.
+              </p>
+              <p className="text-accent-orange font-medium text-sm mt-2">
+                Be first. Be stag. Be welcome. Feel free to drop your LinkedIn Profile in comments field.
               </p>
             </div>
           </div>
