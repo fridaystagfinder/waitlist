@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Users } from 'lucide-react';
+import { ExternalLink, Users, Linkedin, X } from 'lucide-react';
 
 export function InvestorCTA() {
   return (
@@ -11,20 +11,42 @@ export function InvestorCTA() {
               <Users className="w-4 h-4 text-white" />
             </div>
             <div className="text-sm">
-              <span className="text-white font-medium">Pre-Seed Funding Round: Investors Welcome.</span>
+              <span className="text-white font-medium">Pre-Seed Funding: Investors Welcome.</span>
               <span className="text-gray-300 ml-2">Connect with the Founder.</span>
             </div>
           </div>
           
-          <a
-            href="https://www.linkedin.com/in/saibharadwaj"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 investor-cta-button text-white text-sm font-medium rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <span>Connect</span>
-            <ExternalLink className="w-4 h-4" />
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.linkedin.com/in/saibharadwaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 investor-cta-button text-white text-sm font-medium rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>Connect</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
+            
+            <a
+              href="https://www.linkedin.com/in/saibharadwaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-200 transform hover:scale-105"
+              title="Connect on LinkedIn"
+            >
+              <Linkedin className="w-5 h-5 text-white" />
+            </a>
+            
+            <a
+              href="https://www.x.com/saibharadwaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-700 hover:bg-black rounded-lg flex items-center justify-center transition-all duration-200 transform hover:scale-105"
+              title="Follow on X (Twitter)"
+            >
+              <X className="w-5 h-5 text-white" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

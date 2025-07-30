@@ -27,7 +27,7 @@ function App() {
   };
 
   const handleLogoClick = () => {
-    setActiveTab('home');
+    handleNavigation('home');
   };
 
   const handleNavigation = (tab: 'home' | 'about' | 'waitlist' | 'privacy') => {
@@ -37,26 +37,7 @@ function App() {
 
 
 
-  // Scroll to top when privacy tab is active
-  React.useEffect(() => {
-    if (activeTab === 'privacy') {
-      window.scrollTo(0, 0);
-    }
-  }, [activeTab]);
 
-  // Scroll to top when waitlist tab is active
-  React.useEffect(() => {
-    if (activeTab === 'waitlist') {
-      window.scrollTo(0, 0);
-    }
-  }, [activeTab]);
-
-  // Scroll to top when about tab is active
-  React.useEffect(() => {
-    if (activeTab === 'about') {
-      window.scrollTo(0, 0);
-    }
-  }, [activeTab]);
 
   if (showThankYou) {
     return (
@@ -78,7 +59,7 @@ function App() {
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
               <Logo onClick={handleLogoClick} />
               <button 
-                onClick={() => setActiveTab('home')}
+                onClick={() => handleNavigation('home')}
                 className="nav-tab"
               >
                 Back to Home
@@ -109,7 +90,7 @@ function App() {
         </header>
 
         <main className="pt-20">
-          {activeTab === 'home' && <Hero onJoinWaitlist={() => setActiveTab('waitlist')} />}
+          {activeTab === 'home' && <Hero onJoinWaitlist={() => handleNavigation('waitlist')} />}
           {activeTab === 'about' && <About />}
           {activeTab === 'waitlist' && <WaitlistForm onSuccess={handleWaitlistSuccess} />}
         </main>

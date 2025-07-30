@@ -823,7 +823,7 @@ main {
   
   /* Logo responsive adjustments */
   .logo-full span {
-    font-size: 42px !important;
+    font-size: 52px !important;
     letter-spacing: 0.3 !important;
     line-height: 1.2 !important;
     margin-bottom: 4px !important;
@@ -845,7 +845,8 @@ main {
   
   .logo-tagline {
     display: flex !important;
-    font-size: 10px !important;
+    font-size: 8px !important;
+    text-decoration: none !important;
   }
   
   .logo-full img {
@@ -1005,6 +1006,11 @@ main {
     text-align: center;
   }
   
+  .investor-cta .container > div:last-child {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
   .investor-cta .text-sm {
     font-size: 0.8rem;
   }
@@ -1012,6 +1018,12 @@ main {
   .investor-cta-button {
     padding: 8px 16px;
     font-size: 0.8rem;
+  }
+  
+  .investor-cta a[title*="LinkedIn"],
+  .investor-cta a[title*="X"] {
+    width: 32px;
+    height: 32px;
   }
   
   /* Thank You Page */
@@ -1054,7 +1066,7 @@ main {
   
   /* Logo adjustments for very small screens */
   .logo-full span {
-    font-size: 36px !important;
+    font-size: 44px !important;
     letter-spacing: 0.2 !important;
     line-height: 1.2 !important;
     margin-bottom: 3px !important;
@@ -1076,7 +1088,8 @@ main {
   
   .logo-tagline {
     display: flex !important;
-    font-size: 9px !important;
+    font-size: 7px !important;
+    text-decoration: none !important;
   }
   
   .logo-full img {
