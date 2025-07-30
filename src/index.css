@@ -823,16 +823,14 @@ main {
   
   /* Logo responsive adjustments */
   .logo-full span {
-    font-size: 64px !important;
-    letter-spacing: 0.3 !important;
-    line-height: 1.2 !important;
+    font-size: 80px !important;
+    letter-spacing: 0.5 !important;
+    line-height: 1.1 !important;
     margin-bottom: 0 !important;
     font-family: 'Inter, sans-serif' !important;
-    font-weight: 800 !important;
+    font-weight: 900 !important;
     text-transform: uppercase !important;
-    text-decoration: underline !important;
-    text-decoration-color: #8b5cf6 !important;
-    text-underline-offset: 4px !important;
+    text-decoration: none !important;
   }
   
   .logo-full div span {
@@ -1064,16 +1062,14 @@ main {
   
   /* Logo adjustments for very small screens */
   .logo-full span {
-    font-size: 56px !important;
-    letter-spacing: 0.2 !important;
-    line-height: 1.2 !important;
+    font-size: 72px !important;
+    letter-spacing: 0.4 !important;
+    line-height: 1.1 !important;
     margin-bottom: 0 !important;
     font-family: 'Inter, sans-serif' !important;
-    font-weight: 800 !important;
+    font-weight: 900 !important;
     text-transform: uppercase !important;
-    text-decoration: underline !important;
-    text-decoration-color: #8b5cf6 !important;
-    text-underline-offset: 3px !important;
+    text-decoration: none !important;
   }
   
   .logo-full div span {
