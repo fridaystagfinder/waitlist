@@ -103,24 +103,21 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
           'Authorization': `Bearer ${anonKey}`,
         },
         body: JSON.stringify({
-          name: formData.name.trim(),
-          email: formData.email.trim().toLowerCase(),
-          phone: formData.phone.trim() || undefined,
-          city: formData.city === 'Other' ? formData.customCity.trim() : formData.city,
-          comments: formData.comments.trim() || undefined,
-          consent_given: formData.consent,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          city: formData.city === 'Other' ? formData.customCity : formData.city,
+          comments: formData.comments,
         }),
       });
 
-      const data = await response.json();
-
       if (response.ok) {
-        onSuccess(formData.name.trim());
+        onSuccess(formData.name);
       } else {
-        setSubmitError(data.error || 'An error occurred. Please try again.');
+        const errorData = await response.json();
+        setSubmitError(errorData.error || 'Failed to join waitlist. Please try again.');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
       setSubmitError('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
@@ -129,15 +126,15 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
 
   const handleInputChange = (field: keyof FormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
     if (errors[field as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
     }
-    setSubmitError('');
   };
 
   return (
     <section className="relative py-20 px-4">
-      <div className="container mx-auto max-w-3xl">
+      <div className="container mx-auto max-w-6xl">
         <div className="glass-card p-8 md:p-12">
           <div className="text-center mb-6">
             {/* Glowing Mascot */}

@@ -765,16 +765,16 @@ main {
   
   /* Logo responsive adjustments */
   .logo-full span {
-    font-size: 26px !important;
-    letter-spacing: 0.3 !important;
+    font-size: 24px !important;
+    letter-spacing: 0.4 !important;
   }
   
   .logo-full div span {
-    font-size: 12px !important;
+    font-size: 11px !important;
   }
   
   .logo-full div span span {
-    font-size: 14px !important;
+    font-size: 11px !important;
   }
   
   .nav-tabs {
@@ -978,8 +978,8 @@ main {
   
   /* Logo adjustments for very small screens */
   .logo-full span {
-    font-size: 22px !important;
-    letter-spacing: 0.2 !important;
+    font-size: 20px !important;
+    letter-spacing: 0.3 !important;
   }
   
   .logo-full div span {
@@ -987,7 +987,7 @@ main {
   }
   
   .logo-full div span span {
-    font-size: 12px !important;
+    font-size: 10px !important;
   }
   
   .nav-tab {
