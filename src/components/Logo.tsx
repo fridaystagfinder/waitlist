@@ -74,10 +74,10 @@ export function Logo({ onClick, variant = 'full', size = 56 }: LogoProps) {
               textAlign: 'center',
             }}
           >
-            <span style={{ color: '#8b5cf6' }}>Solo? You're</span>
+            <span style={{ color: '#9ca3af' }}>Solo? You're</span>
             <span style={{ 
               fontWeight: 700,
-              color: '#ec4899',
+              color: '#9ca3af',
               textTransform: 'uppercase',
             }}>IN.</span>
           </div>
