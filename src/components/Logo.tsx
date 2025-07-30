@@ -58,6 +58,7 @@ export function Logo({ onClick, variant = 'full', size = 48 }: LogoProps) {
             FridayStag
           </span>
           <div
+            className="logo-tagline"
             style={{
               fontFamily: 'Inter, sans-serif',
               fontSize: 11,
