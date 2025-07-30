@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Users, Shield, ArrowRight } from 'lucide-react';
+import { Logo } from './Logo';
 
 interface HeroProps {
   onJoinWaitlist: () => void;
@@ -9,6 +10,11 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
   return (
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
+        {/* Full Logo */}
+        <div className="mb-6 flex justify-center">
+          <Logo variant="full" />
+        </div>
+        
         {/* Hero Content */}
         <div className="glass-card p-8 md:p-12 mb-12 text-center">
           <h1 className="hero-title">
