@@ -26,7 +26,7 @@ export function ExitIntentPopup() {
       if (
         e.clientY <= 0 && 
         !hasShown && 
-        timeOnSite >= 30 && // At least 30 seconds on site
+        timeOnSite >= 60 && // At least 60 seconds on site
         !isVisible
       ) {
         setIsVisible(true);
@@ -41,7 +41,7 @@ export function ExitIntentPopup() {
         window.scrollY < 100 && 
         lastScrollY > 200 && 
         !hasShown && 
-        timeOnSite >= 30 &&
+        timeOnSite >= 60 &&
         !isVisible
       ) {
         setIsVisible(true);
@@ -139,10 +139,10 @@ export function ExitIntentPopup() {
               <div className="w-16 h-16 bg-gradient-to-r from-accent-purple to-accent-pink rounded-full flex items-center justify-center mx-auto mb-4">
                 <Gift className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-2">Wait! Don't Miss Out! 🎁</h2>
+              <h2 className="text-2xl font-bold text-white mb-2">Join the FridayStag Waitlist</h2>
               <p className="text-gray-300 text-sm">
-                Get <span className="text-accent-purple font-semibold">early access</span> + 
-                <span className="text-accent-pink font-semibold"> exclusive perks</span> before you go!
+                Be first in line for <span className="text-accent-purple font-semibold">early access</span> + 
+                <span className="text-accent-pink font-semibold"> exclusive launch perks</span>
               </p>
             </div>
 
@@ -183,7 +183,7 @@ export function ExitIntentPopup() {
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 ) : (
                   <>
-                    <span>Get Early Access</span>
+                    <span>Join Waitlist</span>
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}

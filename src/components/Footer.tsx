@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Mail, MapPin, X, Linkedin, MessageCircle, Share2 } from 'lucide-react';
+import { Instagram, Mail, MapPin, X, Linkedin, MessageCircle } from 'lucide-react';
 
 interface FooterProps {
   onNavigate?: (tab: 'home' | 'about' | 'waitlist' | 'privacy') => void;
@@ -142,52 +142,6 @@ export function Footer({ onNavigate }: FooterProps) {
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
-              
-              {/* Share Button */}
-              <div className="relative group">
-                <button
-                  className="social-link"
-                  title="Share FridayStag"
-                >
-                  <Share2 className="w-5 h-5" />
-                </button>
-                
-                {/* Share Dropdown */}
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
-                  <div className="bg-gray-900 rounded-lg p-3 shadow-xl border border-accent-purple/20 min-w-max">
-                    <p className="text-xs text-gray-300 mb-2 text-center">Share FridayStag</p>
-                    <div className="flex gap-2">
-                      <a
-                        href={`https://wa.me/?text=${encodeURIComponent('Check out FridayStag! India\'s first stag-friendly platform for solos: ' + window.location.origin)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-green-600 hover:bg-green-700 rounded-md transition-colors"
-                        title="Share on WhatsApp"
-                      >
-                        <MessageCircle className="w-4 h-4 text-white" />
-                      </a>
-                      <a
-                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Check out FridayStag! India\'s first stag-friendly platform for solos: ' + window.location.origin)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-black hover:bg-gray-800 rounded-md transition-colors"
-                        title="Share on X (Twitter)"
-                      >
-                        <X className="w-4 h-4 text-white" />
-                      </a>
-                      <a
-                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.origin)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors"
-                        title="Share on LinkedIn"
-                      >
-                        <Linkedin className="w-4 h-4 text-white" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
             <p className="text-sm text-gray-400 mt-3">
               hello@fridaystag.com

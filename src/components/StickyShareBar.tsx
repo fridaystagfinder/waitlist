@@ -9,11 +9,27 @@ export function StickyShareBar() {
     const handleScroll = () => {
       // Show after scrolling past hero section (approximately 600px)
       setIsVisible(window.scrollY > 600);
+      // Auto-collapse when scrolling
+      if (isExpanded) {
+        setIsExpanded(false);
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      // Auto-collapse when clicking outside
+      if (isExpanded) {
+        setIsExpanded(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    document.addEventListener('click', handleClickOutside);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isExpanded]);
 
   if (!isVisible) return null;
 
@@ -21,7 +37,7 @@ export function StickyShareBar() {
   const shareText = "Just discovered FridayStag! 🎉 India's first stag-friendly platform for solos. Check it out:";
 
   return (
-    <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-30">
+    <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-30" onClick={(e) => e.stopPropagation()}>
       <div className={`transition-all duration-300 ${isExpanded ? 'w-48' : 'w-12'}`}>
         {/* Main Share Button */}
         <button
