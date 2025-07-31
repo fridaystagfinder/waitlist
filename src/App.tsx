@@ -60,6 +60,7 @@ function App() {
           <Footer onNavigate={handleNavigation} />
           <InvestorCTA />
           <StickyShareBar />
+          <ExitIntentPopup isWaitlistPage={false} />
         </div>
       </div>
     );
@@ -87,6 +88,7 @@ function App() {
           <Footer onNavigate={handleNavigation} />
           <InvestorCTA />
           <StickyShareBar />
+          <ExitIntentPopup isWaitlistPage={false} />
         </div>
       </div>
     );
@@ -123,7 +125,7 @@ function App() {
       
       <InvestorCTA />
       <StickyShareBar />
-      <ExitIntentPopup />
+      <ExitIntentPopup isWaitlistPage={activeTab === 'waitlist'} />
     </div>
   );
 }

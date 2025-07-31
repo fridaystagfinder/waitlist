@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { X, Gift, ArrowRight } from 'lucide-react';
 
-export function ExitIntentPopup() {
+interface ExitIntentPopupProps {
+  isWaitlistPage?: boolean;
+}
+
+export function ExitIntentPopup({ isWaitlistPage = false }: ExitIntentPopupProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [hasShown, setHasShown] = useState(false);
   const [timeOnSite, setTimeOnSite] = useState(0);
@@ -20,29 +24,31 @@ export function ExitIntentPopup() {
       setTimeOnSite(prev => prev + 1);
     }, 1000);
 
-    // Exit intent detection
+    // Exit intent detection - only on waitlist page
     const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse leaves from top of viewport (not sides/bottom)
+      // Only trigger if mouse leaves from top of viewport (not sides/bottom) AND on waitlist page
       if (
         e.clientY <= 0 && 
         !hasShown && 
-        timeOnSite >= 60 && // At least 60 seconds on site
-        !isVisible
+        timeOnSite >= 90 && // 90 seconds to read through waitlist content
+        !isVisible &&
+        isWaitlistPage // Only show on waitlist page
       ) {
         setIsVisible(true);
         setHasShown(true);
       }
     };
 
-    // Mobile touch detection (scroll to top quickly)
+    // Mobile touch detection (scroll to top quickly) - only on waitlist page
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
       if (
         window.scrollY < 100 && 
         lastScrollY > 200 && 
         !hasShown && 
-        timeOnSite >= 60 &&
-        !isVisible
+        timeOnSite >= 90 &&
+        !isVisible &&
+        isWaitlistPage // Only show on waitlist page
       ) {
         setIsVisible(true);
         setHasShown(true);
@@ -58,7 +64,7 @@ export function ExitIntentPopup() {
       document.removeEventListener('mouseleave', handleMouseLeave);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [hasShown, timeOnSite, isVisible]);
+  }, [hasShown, timeOnSite, isVisible, isWaitlistPage]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
