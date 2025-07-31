@@ -99,7 +99,9 @@ export function ExitIntentPopup({ isWaitlistPage = false }: ExitIntentPopupProps
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit');
+        const errorData = await response.text();
+        console.error('Supabase error:', response.status, errorData);
+        throw new Error(`Failed to submit: ${response.status}`);
       }
 
       setIsSuccess(true);
@@ -108,7 +110,8 @@ export function ExitIntentPopup({ isWaitlistPage = false }: ExitIntentPopupProps
       }, 3000);
 
     } catch (err) {
-      setError('Something went wrong. Please try again.');
+      console.error('Exit intent signup error:', err);
+      setError('Unable to save signup. Please try the main waitlist form.');
     } finally {
       setIsSubmitting(false);
     }
