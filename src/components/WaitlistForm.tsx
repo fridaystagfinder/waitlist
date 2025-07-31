@@ -171,7 +171,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
               </div>
               <div className="w-px h-12 bg-accent-purple/30"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent-purple">Oct 2025</div>
+                <div className="text-2xl font-bold text-accent-purple">Sep 2025</div>
                 <div className="text-sm text-gray-300">Early Access</div>
               </div>
             </div>
