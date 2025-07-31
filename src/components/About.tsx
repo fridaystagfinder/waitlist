@@ -1,7 +1,11 @@
 import React from 'react';
-import { Shield, Users, Target } from 'lucide-react';
+import { Shield, Users, Target, ArrowRight } from 'lucide-react';
 
-export function About() {
+interface AboutProps {
+  onJoinWaitlist?: () => void;
+}
+
+export function About({ onJoinWaitlist }: AboutProps) {
   return (
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
@@ -59,6 +63,32 @@ export function About() {
             </div>
           </div>
         </div>
+        
+        {/* Waitlist CTA Section */}
+        {onJoinWaitlist && (
+          <div className="glass-card p-8 text-center mt-12">
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Solo Experience?</h3>
+            <p className="text-gray-300 mb-6">Join thousands of solos already on our waitlist</p>
+            
+            <button
+              onClick={onJoinWaitlist}
+              className="cta-button group mb-4"
+            >
+              <span>Join Waitlist Now</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            
+            {/* Enticing waitlist text */}
+            <div className="max-w-md mx-auto p-4 bg-gradient-to-r from-accent-purple/10 to-accent-pink/10 rounded-xl border border-accent-purple/20">
+              <p className="text-sm text-center text-gray-300 leading-relaxed">
+                🎁 <span className="text-accent-purple font-semibold">Early access</span> + 
+                <span className="text-accent-pink font-semibold"> exclusive perks</span> 
+                <br />
+                <span className="text-xs text-gray-400">(Limited-edition t-shirts, keychains & accessories)</span>
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

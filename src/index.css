@@ -818,7 +818,8 @@ main {
   }
   
   .logo-container {
-    gap: 12px;
+    gap: 8px;
+    max-width: 280px;
   }
   
   /* Logo responsive adjustments */
@@ -840,8 +841,8 @@ main {
   }
   
   .logo-full img {
-    width: 64px !important;
-    height: 64px !important;
+    width: 48px !important;
+    height: 48px !important;
   }
   
 
@@ -1080,12 +1081,17 @@ main {
     padding: 0.5rem 0.75rem;
   }
   
+  .logo-container {
+    gap: 6px;
+    max-width: 240px;
+  }
+  
   /* Logo adjustments for very small screens */
   .logo-full > div > span {
-    font-size: 24px !important;
-    letter-spacing: 0.3 !important;
-    line-height: 1.5 !important;
-    margin-bottom: 2px !important;
+    font-size: 22px !important;
+    letter-spacing: 0.2 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1px !important;
     font-family: 'Pacifico', cursive !important;
     font-weight: 600 !important;
     text-transform: none !important;
@@ -1099,8 +1105,8 @@ main {
   }
   
   .logo-full img {
-    width: 60px !important;
-    height: 60px !important;
+    width: 42px !important;
+    height: 42px !important;
   }
   
 

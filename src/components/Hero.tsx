@@ -62,11 +62,21 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
 
           <button
             onClick={onJoinWaitlist}
-            className="cta-button group"
+            className="cta-button group mb-4"
           >
             <span>Join Waitlist</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
+          
+          {/* Enticing waitlist text */}
+          <div className="max-w-md mx-auto p-4 bg-gradient-to-r from-accent-purple/10 to-accent-pink/10 rounded-xl border border-accent-purple/20">
+            <p className="text-sm text-center text-gray-300 leading-relaxed">
+              🎁 <span className="text-accent-purple font-semibold">Early access</span> + 
+              <span className="text-accent-pink font-semibold"> exclusive perks</span> 
+              <br />
+              <span className="text-xs text-gray-400">(Limited-edition t-shirts, keychains & accessories)</span>
+            </p>
+          </div>
         </div>
 
         {/* Feature Cards */}

@@ -224,9 +224,11 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <p className="text-gray-300 text-sm">
               Always free, always private. Be first. Be stag. Be welcome.
             </p>
-            <p className="text-accent-orange text-xs mt-2">
-              Feel free to drop your LinkedIn Profile in the comments field.
-            </p>
+            <div className="mt-4 p-4 bg-gradient-to-r from-accent-purple/15 to-accent-pink/15 rounded-xl border border-accent-purple/30">
+              <p className="text-accent-purple text-sm font-semibold text-center">
+                🎉 Fill the FridayStag waitlist for <span className="text-accent-pink">EARLY ACCESS</span> to our app and exclusive perks like limited-edition t-shirts, keychains, and accessories! 🎁
+              </p>
+            </div>
           </div>
 
           <div className="form-container">
