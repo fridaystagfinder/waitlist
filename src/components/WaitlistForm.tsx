@@ -11,6 +11,7 @@ interface FormData {
   phone: string;
   city: string;
   customCity: string;
+  comments: string;
   consent: boolean;
 }
 
@@ -47,6 +48,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
     phone: '',
     city: '',
     customCity: '',
+    comments: '',
     consent: false,
   });
 
@@ -100,6 +102,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         email: formData.email.trim().toLowerCase(),
         phone: formData.phone.trim(),
         city: formData.city === 'Other' ? formData.customCity.trim() : formData.city,
+        comments: formData.comments.trim() || null,
         consent_given: formData.consent,
       };
 

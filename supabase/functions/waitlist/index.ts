@@ -5,6 +5,7 @@ interface WaitlistRequest {
   email: string;
   phone?: string;
   city: string;
+  comments?: string;
   consent_given: boolean;
 }
 
@@ -76,6 +77,7 @@ Deno.serve(async (req: Request) => {
         email: requestData.email.toLowerCase(),
         phone: requestData.phone || null,
         city: requestData.city,
+        comments: requestData.comments || null,
         consent_given: requestData.consent_given,
       }),
     });
@@ -88,6 +90,7 @@ Deno.serve(async (req: Request) => {
         email: requestData.email.toLowerCase(),
         phone: requestData.phone || null,
         city: requestData.city,
+        comments: requestData.comments || null,
         consent_given: requestData.consent_given,
       }));
       

@@ -33,13 +33,11 @@ CREATE TABLE IF NOT EXISTS waitlist (
   email text NOT NULL UNIQUE,
   phone text,
   city text NOT NULL,
+  comments text,
   brevo_synced boolean DEFAULT false,
   consent_given boolean DEFAULT true,
   created_at timestamptz DEFAULT now()
 );
-
--- Remove comments column if it exists (for existing databases)
-ALTER TABLE waitlist DROP COLUMN IF EXISTS comments;
 
 CREATE TABLE IF NOT EXISTS anonymous_feedback (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
