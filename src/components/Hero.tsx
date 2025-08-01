@@ -33,10 +33,12 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               India's first stag-friendly platform for solos
             </p>
             <div className="hero-features">
-              <span className="feature-tag">✓ Verified Venues (Day & Night)</span>
-              <span className="feature-tag">✓ Friday-Swipe Connections</span>
-              <span className="feature-tag">✓ Work-from-Cafe Mode</span>
-              <span className="feature-tag">✓ Safety & Security</span>
+              <span className="feature-tag highlight-primary">✓ Verified Stag Friendly Venues (Day & Night)</span>
+              <span className="feature-tag highlight-exclusive">✓ Friday-Swipe (Exclusive Feature)</span>
+              <span className="feature-tag highlight-unique">✓ Work from Cafe (or) Bar</span>
+              <span className="feature-tag highlight-safety">✓ Women Only Mode</span>
+              <span className="feature-tag highlight-security">✓ Improved SOS Shield (Safe & Secure)</span>
+              <span className="feature-tag highlight-corporate">✓ Corporate Executive Friendly (Not a Dating App)</span>
             </div>
             <div className="free-highlight">
               <span className="free-text">Always Free for Users!!</span>
@@ -49,15 +51,15 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
-                <span className="text-sm text-gray-300">"Sorry, no stags allowed."</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
-                <span className="text-sm text-gray-300">"You're going alone?"</span>
+                <span className="text-sm text-gray-300">"Why can't I book a table for one?"</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
                 <span className="text-sm text-gray-300">"Is it even safe to go out solo?"</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
+                <span className="text-sm text-gray-300">"Sorry, no stags allowed."</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
@@ -66,6 +68,10 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
                 <span className="text-sm text-gray-300">"I'm new to the city, where are the solo-friendly venues?"</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
+                <span className="text-sm text-gray-300">"You're going alone?"</span>
               </div>
             </div>
             <div className="mt-4 p-4 bg-gradient-to-r from-accent-purple/20 to-accent-pink/20 rounded-lg border border-accent-purple/30">
