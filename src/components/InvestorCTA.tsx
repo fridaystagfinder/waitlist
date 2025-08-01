@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Users, Linkedin, X, ArrowRight } from 'lucide-react';
+import { ExternalLink, Users, Linkedin, ArrowRight } from 'lucide-react';
 
 export function InvestorCTA() {
   return (
@@ -29,6 +29,16 @@ export function InvestorCTA() {
             </a>
             
             <a
+              href="https://www.x.com/saibharadwaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-700 hover:bg-black rounded-lg flex items-center justify-center transition-all duration-200 transform hover:scale-105"
+              title="Follow on X (Twitter)"
+            >
+              <span className="text-white font-bold text-sm">X</span>
+            </a>
+            
+            <a
               href="https://www.linkedin.com/in/saibharadwaj"
               target="_blank"
               rel="noopener noreferrer"
@@ -36,16 +46,6 @@ export function InvestorCTA() {
               title="Connect on LinkedIn"
             >
               <Linkedin className="w-5 h-5 text-white" />
-            </a>
-            
-            <a
-              href="https://www.x.com/saibharadwaj"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 bg-gray-700 hover:bg-black rounded-lg flex items-center justify-center transition-all duration-200 transform hover:scale-105"
-              title="Follow on X (Twitter)"
-            >
-              <X className="w-5 h-5 text-white" />
             </a>
           </div>
         </div>
