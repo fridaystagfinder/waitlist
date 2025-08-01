@@ -45,11 +45,9 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             <span className="free-text">Always Free for Users!!</span>
           </div>
           
-          {/* City Momentum Ticker */}
-          <div className="city-ticker-container">
-            <div className="city-ticker">
-              <span className="ticker-text">🔥 Bengaluru signing up fastest | Hyderabad catching up | Join the movement!</span>
-            </div>
+          {/* City Momentum Notification */}
+          <div className="city-notification" id="cityNotification">
+            <span className="notification-text">🚀 Bengaluru signing up fastest | Hyderabad catching up!</span>
           </div>
           </div>
           
