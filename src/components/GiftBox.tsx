@@ -15,7 +15,7 @@ const GiftBox: React.FC = () => {
       {/* Message that appears above the gift box */}
       {showMessage && (
         <div className="absolute bottom-16 right-0 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg shadow-lg animate-pulse mb-2 whitespace-nowrap">
-          <div className="text-sm font-medium">Signup to unlock your exclusive gift</div>
+          <div className="text-sm font-medium">🎁 Signup to unlock your exclusive gift!</div>
           {/* Small arrow pointing down */}
           <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-purple-600"></div>
         </div>

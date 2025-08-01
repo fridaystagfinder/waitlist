@@ -39,7 +39,7 @@ export function ThankYouPage({ userName, onBackToHome }: ThankYouPageProps) {
         <div className="glass-card p-6 mb-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/20">
           <div className="text-center mb-6">
             <Star className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
-            <h3 className="text-xl font-bold text-white mb-2">🎁 Your Exclusive Perks Unlocked!</h3>
+            <h3 className="text-xl font-bold text-white mb-2">✨ Your Exclusive Perks Unlocked! ✨</h3>
             <p className="text-gray-300 text-sm mb-4">
               These premium features will be available when FridayStag launches in your city
             </p>
