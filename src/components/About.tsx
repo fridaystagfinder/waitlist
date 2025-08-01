@@ -28,7 +28,7 @@ export function About({ onJoinWaitlist }: AboutProps) {
             Why FridayStag?
           </h2>
           <p className="section-subtitle">
-            Urban spaces often shut out solo individuals. India's nightlife and urban spaces weren't built for solos. FridayStag changes that. We're building a new kind of urban access layer—for anyone who moves independently but wants to feel welcome. From solo after-work plans to Friday bar nights, we make it easier to step out, connect, and feel sorted. We're solving for access, trust, and a better way to be solo—without being alone.
+            Urban spaces often shut out solo individuals. India's urban cities weren't built for solos. FridayStag changes that. We're building a new kind of urban access layer—for anyone who moves independently but wants to feel welcome. From solo after-work plans to Friday bar nights, we make it easier to step out, connect, and feel sorted. We're solving for access, trust, and a better way to be solo—without being alone.
           </p>
           
           {/* Feature Highlights */}
