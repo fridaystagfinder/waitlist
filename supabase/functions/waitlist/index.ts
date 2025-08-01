@@ -59,7 +59,7 @@ Deno.serve(async (req: Request) => {
       });
     }
 
-    // Initialize Supabase client
+    // Initialize Supabase client (schema cache fix)
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     
