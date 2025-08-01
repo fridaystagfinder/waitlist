@@ -200,40 +200,36 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             Join the Stag Revolution
             </h2>
 
-          {/* Social Proof Banner */}
-          <div className="glass-card p-6 mb-8 bg-gradient-to-r from-accent-purple/20 via-accent-pink/20 to-accent-orange/20 border border-accent-purple/30">
-            <div className="flex items-center justify-center gap-6 mb-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent-orange">500+</div>
-                <div className="text-sm text-gray-300">Stags & Solo Women</div>
+          {/* Combined Social Proof & Form Section */}
+          <div className="glass-card p-8 md:p-12">
+            {/* Social Proof Banner */}
+            <div className="glass-card p-6 mb-8 bg-gradient-to-r from-accent-purple/20 via-accent-pink/20 to-accent-orange/20 border border-accent-purple/30">
+              <div className="flex items-center justify-center gap-6 mb-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-accent-orange">500+</div>
+                  <div className="text-sm text-gray-300">Stags & Solo Women</div>
+                </div>
+                <div className="w-px h-12 bg-accent-purple/30"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-accent-pink">9</div>
+                  <div className="text-sm text-gray-300">Major Cities</div>
+                </div>
+                <div className="w-px h-12 bg-accent-purple/30"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-accent-purple">Sep 2025</div>
+                  <div className="text-sm text-gray-300">Early Access</div>
+                </div>
               </div>
-              <div className="w-px h-12 bg-accent-purple/30"></div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent-pink">9</div>
-                <div className="text-sm text-gray-300">Major Cities</div>
-              </div>
-              <div className="w-px h-12 bg-accent-purple/30"></div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent-purple">Sep 2025</div>
-                <div className="text-sm text-gray-300">Early Access</div>
-              </div>
+              <p className="text-white font-semibold text-lg mb-2">
+                🔑 Early Access is Opening Soon
+              </p>
+              <p className="text-gray-300 text-sm">
+                Always free for users, safe & secured
+              </p>
             </div>
-            <p className="text-white font-semibold text-lg mb-2">
-              🔑 Early Access is Opening Soon
-            </p>
-            <p className="text-gray-300 text-sm">
-              Always free for users, safe & secured
-            </p>
-          </div>
-        </div>
 
-        {/* Form Section */}
-        <div id="waitlist-form" className="glass-card p-8 md:p-12">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-3">Ready to Join?</h3>
-          </div>
-
-          <div className="form-container">
+                        {/* Form Content */}
+            <div className="form-container">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div className="form-group">
@@ -423,6 +419,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
           </div>
         </div>
       </div>
+    </div>
       
       {/* Success Animation Overlay */}
       {showSuccessAnimation && (
