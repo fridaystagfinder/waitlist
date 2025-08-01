@@ -30,6 +30,17 @@ export function About({ onJoinWaitlist }: AboutProps) {
           <p className="section-subtitle">
             Urban spaces often shut out solo individuals. India's nightlife and urban spaces weren't built for solos. FridayStag changes that. We're building a new kind of urban access layer—for anyone who moves independently but wants to feel welcome. From solo after-work plans to Friday bar nights, we make it easier to step out, connect, and feel sorted. We're solving for access, trust, and a better way to be solo—without being alone.
           </p>
+          
+          {/* Feature Highlights */}
+          <div className="hero-features mt-8">
+            <span className="feature-tag highlight-primary">✓ Verified Stag Friendly Venues (Day & Night)</span>
+            <span className="feature-tag highlight-exclusive">✓ Friday-Swipe (Exclusive Feature)</span>
+            <span className="feature-tag highlight-verified">✓ Verified Users - No Spammers</span>
+            <span className="feature-tag highlight-unique">✓ Work from Cafe (or) Bar</span>
+            <span className="feature-tag highlight-safety">✓ Women Only Mode</span>
+            <span className="feature-tag highlight-security">✓ Improved SOS Shield (Safe & Secure)</span>
+            <span className="feature-tag highlight-executive">✓ Executive Friendly (Not Another Dating App)</span>
+          </div>
         </div>
 
         <div className="about-grid">
