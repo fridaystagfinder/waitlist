@@ -10,7 +10,7 @@ import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { InvestorCTA } from './components/InvestorCTA';
 import { FounderQuote } from './components/FounderQuote';
 import { Testimonials } from './components/Testimonials';
-import { StickyShareBar } from './components/StickyShareBar';
+import { AnonymousFeedback } from './components/AnonymousFeedback';
 import { ExitIntentPopup } from './components/ExitIntentPopup';
 
 export type ActiveTab = 'home' | 'about' | 'waitlist' | 'privacy';
@@ -60,7 +60,7 @@ function App() {
           <ThankYouPage userName={userName} onBackToHome={handleBackToHome} />
           <Footer onNavigate={handleNavigation} />
           <InvestorCTA />
-          <StickyShareBar />
+          <AnonymousFeedback />
           <ExitIntentPopup isWaitlistPage={false} />
         </div>
       </div>
@@ -88,7 +88,7 @@ function App() {
           <PrivacyPolicy />
           <Footer onNavigate={handleNavigation} />
           <InvestorCTA />
-          <StickyShareBar />
+          <AnonymousFeedback />
           <ExitIntentPopup isWaitlistPage={false} />
         </div>
       </div>
@@ -126,7 +126,7 @@ function App() {
       </div>
       
       <InvestorCTA />
-      <StickyShareBar />
+      <AnonymousFeedback />
       <ExitIntentPopup isWaitlistPage={activeTab === 'waitlist'} />
     </div>
   );
