@@ -64,7 +64,7 @@ Deno.serve(async (req: Request) => {
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     
-    const supabaseResponse = await fetch(`${supabaseUrl}/rest/v1/public.waitlist_new`, {
+    const supabaseResponse = await fetch(`${supabaseUrl}/rest/v1/waitlist_new`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ Deno.serve(async (req: Request) => {
 
     // Update Supabase record with Brevo sync status
     if (brevoSynced) {
-      await fetch(`${supabaseUrl}/rest/v1/public.waitlist_new?id=eq.${waitlistEntry[0].id}`, {
+      await fetch(`${supabaseUrl}/rest/v1/waitlist_new?id=eq.${waitlistEntry[0].id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
