@@ -106,11 +106,14 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         consent_given: formData.consent,
       };
 
-      const response = await fetch(`${supabaseUrl}/functions/v1/waitlist`, {
+      // Direct Supabase REST API call to bypass Edge Function caching issues
+      const response = await fetch(`${supabaseUrl}/rest/v1/waitlist_new`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${anonKey}`,
+          'apikey': anonKey,
+          'Prefer': 'return=representation',
         },
         body: JSON.stringify(submissionData),
       });
