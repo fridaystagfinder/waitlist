@@ -60,9 +60,30 @@ Deno.serve(async (req: Request) => {
       });
     }
 
-    // Initialize Supabase client (using waitlist_new table)
+    // CRITICAL FIX: Using waitlist_new table to avoid schema cache issues
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    
+    console.log('Using waitlist_new table to avoid schema cache issues');
+    
+    // First, verify the table exists
+    const tableCheckResponse = await fetch(`${supabaseUrl}/rest/v1/waitlist_new?select=id&limit=1`, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${supabaseServiceKey}`,
+        'apikey': supabaseServiceKey,
+      },
+    });
+    
+    if (!tableCheckResponse.ok) {
+      console.error('CRITICAL: waitlist_new table does not exist or is not accessible');
+      return new Response(JSON.stringify({ 
+        error: 'Database configuration error. Please contact support.' 
+      }), {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
     
     const supabaseResponse = await fetch(`${supabaseUrl}/rest/v1/waitlist_new`, {
       method: 'POST',
@@ -104,7 +125,9 @@ Deno.serve(async (req: Request) => {
         });
       }
       
-      throw new Error('Failed to save to database');
+      console.error('CRITICAL ERROR: Schema cache issue detected');
+      console.error('Error details:', errorData);
+      throw new Error(`Database error: ${errorData.message || 'Schema cache issue'}`);
     }
 
     const waitlistEntry = await supabaseResponse.json();
