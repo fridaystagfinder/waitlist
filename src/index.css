@@ -491,6 +491,35 @@ body {
   50% { text-shadow: 0 0 30px rgba(251, 146, 60, 0.6); }
 }
 
+/* City Momentum Ticker */
+.city-ticker-container {
+  margin-top: 1.5rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  padding: 0.75rem;
+  backdrop-filter: blur(8px);
+}
+
+.city-ticker {
+  display: flex;
+  animation: tickerScroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-text {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding-right: 2rem;
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
 .hero-subtitle {
   font-size: clamp(1.125rem, 3vw, 1.25rem);
   color: var(--text-secondary);
@@ -1072,6 +1101,15 @@ main {
   
   .free-text {
     font-size: 1rem;
+  }
+  
+  .city-ticker-container {
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .ticker-text {
+    font-size: 0.75rem;
   }
   
   .hero-subtitle {

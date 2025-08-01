@@ -41,9 +41,16 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <span className="feature-tag highlight-security">✓ Improved SOS Shield (Safe & Secure)</span>
               <span className="feature-tag highlight-executive">✓ Executive Friendly (Not Another Dating App)</span>
             </div>
-            <div className="free-highlight">
-              <span className="free-text">Always Free for Users!!</span>
+                      <div className="free-highlight">
+            <span className="free-text">Always Free for Users!!</span>
+          </div>
+          
+          {/* City Momentum Ticker */}
+          <div className="city-ticker-container">
+            <div className="city-ticker">
+              <span className="ticker-text">🔥 Bengaluru signing up fastest | Hyderabad catching up | Join the movement!</span>
             </div>
+          </div>
           </div>
           
           {/* "Tired of this?" Section */}
