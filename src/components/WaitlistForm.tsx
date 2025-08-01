@@ -125,7 +125,9 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         }, 2000);
       } else {
         const errorData = await response.json();
-        setSubmitError(errorData.error || 'Failed to join waitlist. Please try again.');
+        console.error('Form submission error:', errorData);
+        console.error('Response status:', response.status);
+        setSubmitError(errorData.error || errorData.message || 'Failed to join waitlist. Please try again.');
       }
     } catch (error) {
       setSubmitError('Network error. Please check your connection and try again.');
