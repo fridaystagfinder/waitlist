@@ -11,7 +11,7 @@ import { InvestorCTA } from './components/InvestorCTA';
 import { FounderQuote } from './components/FounderQuote';
 import { Testimonials } from './components/Testimonials';
 import { AnonymousFeedback } from './components/AnonymousFeedback';
-import { GiftBox } from './components/GiftBox';
+import GiftBox from './components/GiftBox';
 
 
 export type ActiveTab = 'home' | 'about' | 'waitlist' | 'privacy';
