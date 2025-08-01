@@ -222,7 +222,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
               🔑 Early Access is Opening Soon
             </p>
             <p className="text-gray-300 text-sm">
-              Free Forever for Users
+              Always free for users, safe & secured
             </p>
           </div>
         </div>
@@ -230,14 +230,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         {/* Form Section */}
         <div id="waitlist-form" className="glass-card p-8 md:p-12">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-3">Ready to Join?</h3>
-            
-            {/* City Momentum Notification */}
-            <div className="mt-3 p-3 bg-gradient-to-r from-green-500/15 to-emerald-500/15 rounded-lg border border-green-500/30">
-              <p className="text-green-400 text-xs font-semibold text-center">
-                🚀 Bengaluru signing up fastest | Hyderabad catching up!
-              </p>
-            </div>
+            <h3 className="text-2xl font-bold text-white mb-3">Ready to Join?</h3>
           </div>
 
           <div className="form-container">
@@ -418,7 +411,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                 ) : (
                   <>
                     <CheckCircle className="w-5 h-5" />
-                    <span>Join the Revolution</span>
+                    <span>Submit for Waitlist</span>
                   </>
                 )}
               </button>

@@ -11,7 +11,7 @@ import { InvestorCTA } from './components/InvestorCTA';
 import { FounderQuote } from './components/FounderQuote';
 import { Testimonials } from './components/Testimonials';
 import { AnonymousFeedback } from './components/AnonymousFeedback';
-import { ExitIntentPopup } from './components/ExitIntentPopup';
+
 
 export type ActiveTab = 'home' | 'about' | 'waitlist' | 'privacy';
 
@@ -55,14 +55,13 @@ function App() {
           <header className="header">
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
               <Logo onClick={handleLogoClick} />
-              <TabNavigation activeTab="home" onTabChange={handleNavigation} />
+              <TabNavigation activeTab={activeTab} onTabChange={handleNavigation} />
             </div>
           </header>
           <ThankYouPage userName={userName} onBackToHome={handleBackToHome} />
           <Footer onNavigate={handleNavigation} />
           <InvestorCTA />
           <AnonymousFeedback />
-          <ExitIntentPopup isWaitlistPage={false} />
         </div>
       </div>
     );
@@ -90,7 +89,6 @@ function App() {
           <Footer onNavigate={handleNavigation} />
           <InvestorCTA />
           <AnonymousFeedback />
-          <ExitIntentPopup isWaitlistPage={false} />
         </div>
       </div>
     );
@@ -127,8 +125,7 @@ function App() {
       </div>
       
       <InvestorCTA />
-      <AnonymousFeedback />
-      <ExitIntentPopup isWaitlistPage={activeTab === 'waitlist'} />
+      {activeTab !== 'waitlist' && <AnonymousFeedback />}
     </div>
   );
 }

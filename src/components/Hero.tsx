@@ -32,17 +32,6 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             <p className="hero-subtitle-main">
               India's first stag friendly platform for stags & solo women
             </p>
-            <div className="hero-features">
-              <span className="feature-tag highlight-primary">✓ Verified Stag Friendly Venues (Day & Night)</span>
-              <span className="feature-tag highlight-exclusive">✓ Friday-Swipe (Exclusive Feature)</span>
-              <span className="feature-tag highlight-verified">✓ Verified Users - No Spammers</span>
-              <span className="feature-tag highlight-unique">✓ Work from Cafe (or) Bar</span>
-              <span className="feature-tag highlight-safety">✓ Women Only Mode</span>
-              <span className="feature-tag highlight-security">✓ Improved SOS Shield (Safe & Secure)</span>
-              <span className="feature-tag highlight-executive">✓ Executive Friendly (Not Another Dating App)</span>
-            </div>
-          
-
           </div>
           
           {/* "Tired of this?" Section */}
@@ -74,9 +63,9 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
                 <span className="text-sm text-gray-300">"You're going alone?"</span>
               </div>
             </div>
-            <div className="mt-4 p-4 bg-gradient-to-r from-accent-purple/20 to-accent-pink/20 rounded-lg border border-accent-purple/30">
-              <p className="text-accent-purple font-medium">
-                We hear you. That's why we're building FridayStag.
+            <div className="mt-4 p-3 bg-gray-800/30 rounded-lg">
+              <p className="text-gray-300 text-sm leading-relaxed">
+                We hear you. That's why we're building FridayStag - to solve these exact problems and make solo experiences better for everyone.
               </p>
             </div>
           </div>
@@ -85,7 +74,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             onClick={onJoinWaitlist}
             className="cta-button group mb-4"
           >
-            <span>Jump on the Waitlist</span>
+            <span>Join the Waitlist</span>
             <span className="free-forever-badge">Free Forever!</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
