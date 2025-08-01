@@ -502,26 +502,7 @@ body {
   color: #a855f7;
 }
 
-.free-highlight {
-  text-align: center;
-  margin-top: 1rem;
-}
 
-.free-text {
-  background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 1.125rem;
-  font-weight: 700;
-  text-shadow: 0 0 20px rgba(251, 146, 60, 0.3);
-  animation: freeGlow 2s ease-in-out infinite;
-}
-
-@keyframes freeGlow {
-  0%, 100% { text-shadow: 0 0 20px rgba(251, 146, 60, 0.3); }
-  50% { text-shadow: 0 0 30px rgba(251, 146, 60, 0.6); }
-}
 
 /* City Momentum Notification */
 .city-notification {
@@ -1145,9 +1126,7 @@ main {
     max-width: 280px;
   }
   
-  .free-text {
-    font-size: 1rem;
-  }
+
   
   .city-notification {
     top: 0.5rem;

@@ -41,9 +41,6 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <span className="feature-tag highlight-security">✓ Improved SOS Shield (Safe & Secure)</span>
               <span className="feature-tag highlight-executive">✓ Executive Friendly (Not Another Dating App)</span>
             </div>
-                      <div className="free-highlight">
-            <span className="free-text">Always Free for Users!!</span>
-          </div>
           
           {/* City Momentum Notification */}
           <div className="city-notification" id="cityNotification">
