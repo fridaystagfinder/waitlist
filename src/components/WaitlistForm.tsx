@@ -300,7 +300,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   className={`form-input ${errors.phone ? 'error' : ''}`}
-                  placeholder="+91 XXXXX XXXXX"
+                  placeholder="Enter your phone number"
                   disabled={isSubmitting}
                 />
                 {errors.phone && (
@@ -309,7 +309,6 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                     {errors.phone}
                   </div>
                 )}
-                <p className="text-xs text-gray-500 mt-1">Include country code for better experience</p>
               </div>
 
               {/* City Field */}
