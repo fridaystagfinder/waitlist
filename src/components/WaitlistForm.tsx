@@ -153,9 +153,9 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             />
           </div>
           
-          <h2 className="section-title mb-4">
+            <h2 className="section-title mb-4">
             Join the Stag Revolution
-          </h2>
+            </h2>
 
           {/* Social Proof Banner */}
           <div className="glass-card p-6 mb-8 bg-gradient-to-r from-accent-purple/20 via-accent-pink/20 to-accent-orange/20 border border-accent-purple/30">
@@ -181,7 +181,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <p className="text-gray-300 text-sm">
               Be among the first to experience India's solo-friendly nightlife app. Get exclusive early access to Friday Swipes, verified venues, and exclusive safety features.
             </p>
-          </div>
+                </div>
 
           {/* Testimonials Grid */}
           <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -199,7 +199,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                 </div>
               </div>
             </div>
-            
+
             <div className="glass-card p-5 border border-accent-pink/30 bg-gradient-to-br from-accent-pink/10 to-transparent">
               <p className="text-white font-medium italic text-sm leading-relaxed mb-3">
                 "I got into a premium bar as a stag—Friday match made my weekend!"
@@ -214,8 +214,8 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+              </div>
+            </div>
 
         {/* Form Section */}
         <div className="glass-card p-8 md:p-12">

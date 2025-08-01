@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { InvestorCTA } from './components/InvestorCTA';
 import { FounderQuote } from './components/FounderQuote';
+import { Testimonials } from './components/Testimonials';
 import { StickyShareBar } from './components/StickyShareBar';
 import { ExitIntentPopup } from './components/ExitIntentPopup';
 
@@ -113,6 +114,7 @@ function App() {
           {activeTab === 'home' && (
             <>
               <Hero onJoinWaitlist={() => handleNavigation('waitlist')} />
+              <Testimonials />
               <FounderQuote />
             </>
           )}
