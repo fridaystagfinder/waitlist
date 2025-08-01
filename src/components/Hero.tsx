@@ -94,12 +94,11 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
           </button>
           
           {/* Enticing waitlist text */}
-          <div className="max-w-md mx-auto p-4 bg-gradient-to-r from-accent-purple/10 to-accent-pink/10 rounded-xl border border-accent-purple/20">
-            <p className="text-sm text-center text-gray-300 leading-relaxed">
-              🎁 <span className="text-accent-purple font-semibold">Early access</span> + 
-              <span className="text-accent-pink font-semibold"> exclusive perks</span> 
+          <div className="max-w-md mx-auto p-3 bg-gray-800/30 rounded-lg">
+            <p className="text-sm text-center text-gray-400 leading-relaxed">
+              🎁 Early access + exclusive perks
               <br />
-              <span className="text-xs text-gray-400">(Limited-edition t-shirts, keychains & accessories)</span>
+              <span className="text-xs text-gray-500">(Limited-edition t-shirts, keychains & accessories)</span>
             </p>
           </div>
         </div>
