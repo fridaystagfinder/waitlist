@@ -56,10 +56,7 @@ export function AnonymousFeedback() {
     try {
       const submissionData = {
         feedback: feedback.trim(),
-        feedback_type: feedbackType,
-        user_agent: navigator.userAgent,
-        page_url: window.location.href,
-        created_at: new Date().toISOString()
+        user_agent: navigator.userAgent
       };
 
       console.log('Submitting feedback:', submissionData); // Debug log
