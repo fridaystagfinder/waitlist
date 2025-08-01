@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MessageSquareHeart, Send, X, Sparkles } from 'lucide-react';
 
 export function AnonymousFeedback() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
   const [feedback, setFeedback] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -10,8 +10,6 @@ export function AnonymousFeedback() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling past hero section (approximately 600px)
-      setIsVisible(window.scrollY > 600);
       // Auto-collapse when scrolling
       if (isExpanded && !isSubmitted) {
         setIsExpanded(false);
@@ -81,6 +79,11 @@ export function AnonymousFeedback() {
 
   return (
     <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-30" onClick={(e) => e.stopPropagation()}>
+      {/* Always Visible Label */}
+      <div className="text-center mb-2">
+        <p className="text-xs text-gray-400 font-medium">💭 Feedback</p>
+      </div>
+      
       <div className={`transition-all duration-300 ${isExpanded ? 'w-72' : 'w-12'}`}>
         {/* Main Feedback Button */}
         <button
