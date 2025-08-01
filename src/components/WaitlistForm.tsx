@@ -183,39 +183,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             </p>
                 </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-2 gap-4 mb-8">
-            <div className="glass-card p-5 border border-accent-purple/30 bg-gradient-to-br from-accent-purple/10 to-transparent">
-              <p className="text-white font-medium italic text-sm leading-relaxed mb-3">
-                "Finally an app that makes going out alone feel easy and safe."
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-accent-orange to-accent-pink rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xs font-bold">S</span>
-                </div>
-                <div className="text-left">
-                  <div className="text-accent-orange font-semibold text-sm">Shravya, 26</div>
-                  <div className="text-gray-400 text-xs">Software Manager, Bengaluru</div>
-                </div>
-              </div>
-            </div>
 
-            <div className="glass-card p-5 border border-accent-pink/30 bg-gradient-to-br from-accent-pink/10 to-transparent">
-              <p className="text-white font-medium italic text-sm leading-relaxed mb-3">
-                "I got into a premium bar as a stag—Friday match made my weekend!"
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-accent-purple to-accent-orange rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xs font-bold">A</span>
-                </div>
-                <div className="text-left">
-                  <div className="text-accent-purple font-semibold text-sm">Akash, 28</div>
-                  <div className="text-gray-400 text-xs">Growth Marketer, Hyderabad</div>
-                </div>
-              </div>
-            </div>
-              </div>
-            </div>
 
         {/* Form Section */}
         <div className="glass-card p-8 md:p-12">

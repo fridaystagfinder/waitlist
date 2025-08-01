@@ -26,6 +26,18 @@ export function Testimonials() {
       gradientFrom: "accent-purple",
       gradientTo: "accent-orange",
       nameColor: "accent-purple"
+    },
+    {
+      id: 3,
+      text: "Finally found a platform that gets it—singles deserve the same experiences as couples. FridayStag made me feel welcomed, not like an outsider.",
+      name: "Eshwar",
+      age: 29,
+      role: "Product Designer",
+      city: "Pune",
+      initial: "E",
+      gradientFrom: "accent-pink",
+      gradientTo: "accent-purple",
+      nameColor: "accent-pink"
     }
   ];
 
@@ -43,7 +55,7 @@ export function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id}
@@ -54,7 +66,7 @@ export function Testimonials() {
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star 
                     key={star} 
-                    className="w-4 h-4 fill-accent-orange text-accent-orange opacity-80"
+                    className="w-4 h-4 fill-yellow-400 text-yellow-400 opacity-90"
                   />
                 ))}
               </div>
