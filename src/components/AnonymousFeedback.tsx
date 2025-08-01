@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageSquareHeart, Send, X, Sparkles } from 'lucide-react';
+import { MessageSquareHeart, Send, X, Sparkles, Mail, MessageCircle } from 'lucide-react';
 
 export function AnonymousFeedback() {
   const [isVisible, setIsVisible] = useState(true);
@@ -7,6 +7,7 @@ export function AnonymousFeedback() {
   const [feedback, setFeedback] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [feedbackType, setFeedbackType] = useState<'thoughts' | 'contact' | 'suggestions'>('thoughts');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,6 +42,7 @@ export function AnonymousFeedback() {
     try {
       const submissionData = {
         feedback: feedback.trim(),
+        feedback_type: feedbackType,
         user_agent: navigator.userAgent,
         page_url: window.location.href,
         created_at: new Date().toISOString()
@@ -115,19 +117,73 @@ export function AnonymousFeedback() {
             <div className="relative z-10">
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-3">
+                  {/* Feedback Type Selector */}
+                  <div className="flex gap-1 mb-3">
+                    <button
+                      type="button"
+                      onClick={() => setFeedbackType('thoughts')}
+                      className={`flex-1 px-2 py-1.5 text-xs rounded-md transition-all duration-200 ${
+                        feedbackType === 'thoughts'
+                          ? 'bg-accent-purple/20 text-accent-purple border border-accent-purple/30'
+                          : 'bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:bg-gray-800/70'
+                      }`}
+                    >
+                      <MessageSquareHeart className="w-3 h-3 inline mr-1" />
+                      Thoughts
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setFeedbackType('suggestions')}
+                      className={`flex-1 px-2 py-1.5 text-xs rounded-md transition-all duration-200 ${
+                        feedbackType === 'suggestions'
+                          ? 'bg-accent-purple/20 text-accent-purple border border-accent-purple/30'
+                          : 'bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:bg-gray-800/70'
+                      }`}
+                    >
+                      <Sparkles className="w-3 h-3 inline mr-1" />
+                      Ideas
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setFeedbackType('contact')}
+                      className={`flex-1 px-2 py-1.5 text-xs rounded-md transition-all duration-200 ${
+                        feedbackType === 'contact'
+                          ? 'bg-accent-purple/20 text-accent-purple border border-accent-purple/30'
+                          : 'bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:bg-gray-800/70'
+                      }`}
+                    >
+                      <Mail className="w-3 h-3 inline mr-1" />
+                      Contact
+                    </button>
+                  </div>
+                  
                   <div className="flex items-center gap-2 mb-3">
-                    <MessageSquareHeart className="w-4 h-4 text-accent-purple" />
-                    <p className="text-sm font-medium text-white">Share your thoughts</p>
+                    {feedbackType === 'thoughts' && <MessageSquareHeart className="w-4 h-4 text-accent-purple" />}
+                    {feedbackType === 'suggestions' && <Sparkles className="w-4 h-4 text-accent-purple" />}
+                    {feedbackType === 'contact' && <Mail className="w-4 h-4 text-accent-purple" />}
+                    <p className="text-sm font-medium text-white">
+                      {feedbackType === 'thoughts' && 'Share your thoughts'}
+                      {feedbackType === 'suggestions' && 'Share your ideas'}
+                      {feedbackType === 'contact' && 'Get in touch'}
+                    </p>
                   </div>
                   
                   <p className="text-xs text-gray-400 mb-3">
-                    Help us build better for solos. 100% anonymous.
+                    {feedbackType === 'thoughts' && 'Help us build better for solos. 100% anonymous.'}
+                    {feedbackType === 'suggestions' && 'Got ideas for features or improvements? We\'d love to hear!'}
+                    {feedbackType === 'contact' && 'Questions, partnerships, or just want to say hi? Drop us a message.'}
                   </p>
                   
                   <textarea
                     value={feedback}
                     onChange={(e) => setFeedback(e.target.value)}
-                    placeholder="What's on your mind about solo experiences? Any suggestions, concerns, or hopes?"
+                    placeholder={
+                      feedbackType === 'thoughts' 
+                        ? "What's on your mind about solo experiences? Any concerns or hopes?"
+                        : feedbackType === 'suggestions'
+                        ? "What features would make solo experiences better? Any ideas for the platform?"
+                        : "Your message, questions, or partnership inquiries..."
+                    }
                     className="w-full h-24 px-3 py-2 bg-gray-800/50 border border-accent-purple/30 rounded-md text-white text-sm placeholder-gray-500 focus:outline-none focus:border-accent-purple focus:ring-1 focus:ring-accent-purple/20 resize-none"
                     disabled={isSubmitting}
                     maxLength={500}
@@ -164,7 +220,9 @@ export function AnonymousFeedback() {
                   </div>
                   <p className="text-sm font-medium text-white mb-1">Thank you!</p>
                   <p className="text-xs text-gray-400">
-                    Your feedback helps us build better for solos ✨
+                    {feedbackType === 'thoughts' && 'Your feedback helps us build better for solos ✨'}
+                    {feedbackType === 'suggestions' && 'Your ideas help shape the future of solo experiences ✨'}
+                    {feedbackType === 'contact' && 'We\'ll get back to you soon! ✨'}
                   </p>
                 </div>
               )}
