@@ -106,7 +106,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         consent_given: formData.consent,
       };
 
-      const response = await fetch(`${supabaseUrl}/functions/v1/waitlist`, {
+      const response = await fetch(`${supabaseUrl}/functions/v1/waitlist-v2`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
