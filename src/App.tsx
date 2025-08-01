@@ -11,6 +11,7 @@ import { InvestorCTA } from './components/InvestorCTA';
 import { FounderQuote } from './components/FounderQuote';
 import { Testimonials } from './components/Testimonials';
 import { AnonymousFeedback } from './components/AnonymousFeedback';
+import { GiftBox } from './components/GiftBox';
 
 
 export type ActiveTab = 'home' | 'about' | 'waitlist' | 'privacy';
@@ -125,6 +126,7 @@ function App() {
       
       {(activeTab === 'home' || activeTab === 'about') && <InvestorCTA />}
       {activeTab !== 'waitlist' && <AnonymousFeedback />}
+      {activeTab === 'waitlist' && <GiftBox />}
     </div>
   );
 }
