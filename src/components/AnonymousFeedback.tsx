@@ -83,7 +83,7 @@ export function AnonymousFeedback() {
     <div className="fixed right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-30" onClick={(e) => e.stopPropagation()}>
       {/* Always Visible Label */}
                         <div className="text-center mb-2">
-                    <p className="text-xs text-gray-400 font-medium">Single?</p>
+                    <p className="text-xs text-gray-400 font-medium">Feedback?</p>
                   </div>
       
       <div className={`transition-all duration-300 ${isExpanded ? 'w-72' : 'w-12'}`}>
