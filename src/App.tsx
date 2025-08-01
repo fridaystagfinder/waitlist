@@ -87,7 +87,6 @@ function App() {
           </header>
           <PrivacyPolicy />
           <Footer onNavigate={handleNavigation} />
-          <InvestorCTA />
           <AnonymousFeedback />
         </div>
       </div>
@@ -124,7 +123,7 @@ function App() {
         <Footer onNavigate={handleNavigation} />
       </div>
       
-      <InvestorCTA />
+      {(activeTab === 'home' || activeTab === 'about') && <InvestorCTA />}
       {activeTab !== 'waitlist' && <AnonymousFeedback />}
     </div>
   );
