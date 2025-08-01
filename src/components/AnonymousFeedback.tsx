@@ -94,6 +94,13 @@ export function AnonymousFeedback() {
           
           {/* Floating sparkles on hover */}
           <Sparkles className="w-3 h-3 text-white/60 absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-125" />
+          
+          {/* Hover Tooltip */}
+          <div className="absolute right-16 top-1/2 transform -translate-y-1/2 text-xs text-gray-300 bg-gray-900/90 backdrop-blur-sm px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none shadow-lg border border-accent-purple/20">
+            💭 Share your thoughts
+            {/* Tooltip arrow */}
+            <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-900/90 border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
+          </div>
         </button>
 
         {/* Expanded Feedback Form */}
