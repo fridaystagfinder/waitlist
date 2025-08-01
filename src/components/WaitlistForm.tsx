@@ -176,7 +176,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
               🔑 Early Access is Opening Soon
             </p>
             <p className="text-gray-300 text-sm">
-              Be among the first to experience India's solo-friendly nightlife app. Get exclusive early access to Friday Swipes, verified venues, and exclusive safety features.
+              Get in early for Friday Swipes, stag-friendly venues, safety stack—and exclusive perks!
             </p>
           </div>
         </div>
@@ -184,13 +184,20 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         {/* Form Section */}
         <div className="glass-card p-8 md:p-12">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Ready to Join?</h3>
+            <h3 className="text-3xl font-bold text-white mb-3">Ready to Join?</h3>
             <p className="text-gray-300 text-sm">
-              Always free, always private. Be first. Be stag. Be welcome.
+              Jump on the waitlist—always free, always private.
             </p>
             <div className="mt-4 p-4 bg-gradient-to-r from-accent-purple/15 to-accent-pink/15 rounded-xl border border-accent-purple/30">
               <p className="text-accent-purple text-sm font-semibold text-center">
-                🎉 Fill the FridayStag waitlist for <span className="text-accent-pink">EARLY ACCESS</span> to our app and exclusive perks like limited-edition t-shirts, keychains, and accessories! 🎁
+                🎁 Early access + exclusive perks (t-shirts, keychains & more)
+              </p>
+            </div>
+            
+            {/* Social Proof */}
+            <div className="mt-3 text-center">
+              <p className="text-xs text-gray-400">
+                Join <span className="text-accent-orange font-semibold">500+ early members</span> already on the waitlist
               </p>
             </div>
           </div>
