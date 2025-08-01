@@ -53,6 +53,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -112,7 +113,10 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
       });
 
       if (response.ok) {
-        onSuccess(formData.name.trim());
+        setShowSuccessAnimation(true);
+        setTimeout(() => {
+          onSuccess(formData.name.trim());
+        }, 2000);
       } else {
         const errorData = await response.json();
         setSubmitError(errorData.error || 'Failed to join waitlist. Please try again.');
@@ -216,7 +220,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   className={`form-input ${errors.name ? 'error' : ''}`}
-                  placeholder="Enter your full name"
+                  placeholder="What should we call you?"
                   disabled={isSubmitting}
                 />
                 {errors.name && (
@@ -377,6 +381,33 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
           </div>
         </div>
       </div>
+      
+      {/* Success Animation Overlay */}
+      {showSuccessAnimation && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-gray-900/95 backdrop-blur-sm rounded-2xl p-8 text-center border border-accent-purple/30 shadow-2xl animate-in fade-in duration-300">
+            {/* Success Icon */}
+            <div className="w-16 h-16 bg-gradient-to-r from-accent-purple to-accent-pink rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+              <CheckCircle className="w-8 h-8 text-white" />
+            </div>
+            
+            {/* Success Message */}
+            <h3 className="text-2xl font-bold text-white mb-2">
+              Welcome to the Revolution!
+            </h3>
+            <p className="text-gray-300 text-lg">
+              You're now part of the stag-friendly movement
+            </p>
+            
+            {/* Loading dots */}
+            <div className="flex justify-center mt-6 space-x-1">
+              <div className="w-2 h-2 bg-accent-purple rounded-full animate-bounce"></div>
+              <div className="w-2 h-2 bg-accent-pink rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+              <div className="w-2 h-2 bg-accent-orange rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

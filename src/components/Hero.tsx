@@ -64,7 +64,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             onClick={onJoinWaitlist}
             className="cta-button group mb-4"
           >
-            <span>Join Waitlist</span>
+            <span>Jump on the Waitlist</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           
