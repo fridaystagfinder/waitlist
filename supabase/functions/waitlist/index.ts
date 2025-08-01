@@ -63,12 +63,13 @@ Deno.serve(async (req: Request) => {
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     
-    const supabaseResponse = await fetch(`${supabaseUrl}/rest/v1/waitlist`, {
+    const supabaseResponse = await fetch(`${supabaseUrl}/rest/v1/public.waitlist`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${supabaseServiceKey}`,
         'apikey': supabaseServiceKey,
+        'Prefer': 'return=representation',
       },
       body: JSON.stringify({
         name: requestData.name,
@@ -82,6 +83,13 @@ Deno.serve(async (req: Request) => {
     if (!supabaseResponse.ok) {
       const errorData = await supabaseResponse.json();
       console.error('Supabase error:', errorData);
+      console.error('Request body sent:', JSON.stringify({
+        name: requestData.name,
+        email: requestData.email.toLowerCase(),
+        phone: requestData.phone || null,
+        city: requestData.city,
+        consent_given: requestData.consent_given,
+      }));
       
       // Handle duplicate email
       if (errorData.code === '23505') {
@@ -138,7 +146,7 @@ Deno.serve(async (req: Request) => {
 
     // Update Supabase record with Brevo sync status
     if (brevoSynced) {
-      await fetch(`${supabaseUrl}/rest/v1/waitlist?id=eq.${waitlistEntry[0].id}`, {
+      await fetch(`${supabaseUrl}/rest/v1/public.waitlist?id=eq.${waitlistEntry[0].id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
