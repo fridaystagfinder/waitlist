@@ -79,23 +79,20 @@ export function About({ onJoinWaitlist }: AboutProps) {
         {onJoinWaitlist && (
           <div className="glass-card p-8 text-center mt-12">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Solo Experience?</h3>
-            <p className="text-gray-300 mb-6">Join thousands of solos already on our waitlist</p>
+            <p className="text-gray-300 mb-6">Be among the first to experience India's solo-friendly revolution</p>
             
             <button
               onClick={onJoinWaitlist}
               className="cta-button group mb-4"
             >
-              <span>Join Waitlist Now</span>
+              <span>Join the Waitlist</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             
-            {/* Enticing waitlist text */}
-            <div className="max-w-md mx-auto p-4 bg-gradient-to-r from-accent-purple/10 to-accent-pink/10 rounded-xl border border-accent-purple/20">
-              <p className="text-sm text-center text-gray-300 leading-relaxed">
-                🎁 <span className="text-accent-purple font-semibold">Early access</span> + 
-                <span className="text-accent-pink font-semibold"> exclusive perks</span> 
-                <br />
-                <span className="text-xs text-gray-400">(Limited-edition t-shirts, keychains & accessories)</span>
+            {/* Subtle value proposition */}
+            <div className="max-w-md mx-auto p-3 bg-gray-800/30 rounded-lg">
+              <p className="text-sm text-center text-gray-400 leading-relaxed">
+                Free forever • No spam • Privacy first
               </p>
             </div>
           </div>
