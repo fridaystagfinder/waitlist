@@ -35,6 +35,55 @@ export function ThankYouPage({ userName, onBackToHome }: ThankYouPageProps) {
           You're officially part of the movement to make India solo-friendly! You will be the first to be notified of the app launch with amazing perks. Get ready to unleash your stag life!
         </p>
         
+        {/* Exclusive Perks Section */}
+        <div className="glass-card p-6 mb-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/20">
+          <div className="text-center mb-6">
+            <Star className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
+            <h3 className="text-xl font-bold text-white mb-2">🎁 Your Exclusive Perks Unlocked!</h3>
+            <p className="text-gray-300 text-sm mb-4">
+              These premium features will be available when FridayStag launches in your city
+            </p>
+            <div className="text-purple-300 text-xs font-medium bg-purple-900/50 px-3 py-1 rounded-full inline-block">
+              🚀 Launching September 2025
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-300">Friday Swipe (Exclusive Feature)</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-300">Verified Stag Friendly Venues</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-300">Work from Cafe/Bar</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-300">Women Only Mode</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-300">Improved SOS Shield (Safe & Secure)</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-300">Executive Friendly (Not Another Dating App)</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-300">Verified Users - No Spammers</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-300">Always Free for Users</span>
+            </div>
+          </div>
+        </div>
+        
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400 mb-8">
           <div className="flex items-center space-x-2">
             <Mail className="w-4 h-4 text-purple-400" />

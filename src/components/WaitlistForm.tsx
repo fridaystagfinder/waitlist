@@ -397,18 +397,15 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`cta-button w-full ${isSubmitting ? 'loading' : ''}`}
+                className="w-full bg-gradient-to-r from-accent-purple to-accent-pink text-white font-semibold py-4 px-8 rounded-xl hover:from-accent-purple/90 hover:to-accent-pink/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isSubmitting ? (
-                  <>
-                    <div className="spinner" />
-                    <span>Joining the Revolution...</span>
-                  </>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Loader className="w-5 h-5 animate-spin" />
+                    <span>Signing up...</span>
+                  </div>
                 ) : (
-                  <>
-                    <CheckCircle className="w-5 h-5" />
-                    <span>Submit for Waitlist</span>
-                  </>
+                  "Signup for Waitlist"
                 )}
               </button>
 
