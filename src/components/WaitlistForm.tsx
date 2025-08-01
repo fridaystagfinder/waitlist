@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, User, Phone, MapPin, MessageSquare, CheckCircle, AlertCircle, Loader } from 'lucide-react';
+import { Mail, User, Phone, MapPin, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 
 interface WaitlistFormProps {
   onSuccess: (name: string) => void;
@@ -11,7 +11,6 @@ interface FormData {
   phone: string;
   city: string;
   customCity: string;
-  comments: string;
   consent: boolean;
 }
 
@@ -48,7 +47,6 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
     phone: '',
     city: '',
     customCity: '',
-    comments: '',
     consent: false,
   });
 
@@ -101,7 +99,6 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         email: formData.email.trim().toLowerCase(),
         phone: formData.phone.trim(),
         city: formData.city === 'Other' ? formData.customCity.trim() : formData.city,
-        comments: formData.comments.trim() || null,
         consent_given: formData.consent,
       };
 
@@ -306,23 +303,6 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                     {errors.city}
                   </div>
                 )}
-              </div>
-
-              {/* Comments Field */}
-              <div className="form-group">
-                <label htmlFor="comments" className="form-label">
-                  <MessageSquare className="w-4 h-4" />
-                  Comments & Feedback (Optional)
-                </label>
-                <textarea
-                  id="comments"
-                  value={formData.comments}
-                  onChange={(e) => handleInputChange('comments', e.target.value)}
-                  className="form-input min-h-[120px] resize-y"
-                  placeholder=""
-                  disabled={isSubmitting}
-                  rows={4}
-                />
               </div>
 
               {/* Consent Checkbox */}
