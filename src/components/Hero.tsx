@@ -10,7 +10,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Hero Content */}
-        <div className="glass-card p-8 md:p-12 mb-12 text-center">
+        <div className="glass-card p-8 md:p-12 mb-16 text-center">
           {/* Glowing Mascot */}
           <div className="mb-6 flex justify-center">
             <img

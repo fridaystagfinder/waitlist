@@ -37,7 +37,19 @@ function App() {
 
   const handleNavigation = (tab: 'home' | 'about' | 'waitlist' | 'privacy') => {
     setActiveTab(tab);
-    window.scrollTo(0, 0);
+    if (tab === 'waitlist') {
+      // Scroll to form after a brief delay to ensure the component is rendered
+      setTimeout(() => {
+        const formElement = document.getElementById('waitlist-form');
+        if (formElement) {
+          formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          window.scrollTo(0, 0);
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
   };
 
 

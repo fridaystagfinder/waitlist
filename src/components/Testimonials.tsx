@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
 
 export function Testimonials() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time for smooth transition
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
+
   const testimonials = [
     {
       id: 1,
@@ -42,7 +52,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="relative py-12 px-4">
+                    <section className="relative py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-8">
@@ -54,9 +64,33 @@ export function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {testimonials.map((testimonial) => (
+                            {/* Testimonials Grid */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                      {isLoading ? (
+                        // Skeleton loading
+                        Array.from({ length: 3 }).map((_, index) => (
+                          <div key={`skeleton-${index}`} className="glass-card p-6 border border-accent-purple/30 bg-gradient-to-br from-accent-purple/10 to-transparent animate-pulse">
+                            <div className="flex gap-1 mb-4">
+                              {Array.from({ length: 5 }).map((_, starIndex) => (
+                                <div key={starIndex} className="w-4 h-4 bg-gray-600 rounded"></div>
+                              ))}
+                            </div>
+                            <div className="space-y-3">
+                              <div className="h-4 bg-gray-600 rounded w-3/4"></div>
+                              <div className="h-4 bg-gray-600 rounded w-full"></div>
+                              <div className="h-4 bg-gray-600 rounded w-2/3"></div>
+                            </div>
+                            <div className="flex items-center gap-3 mt-5">
+                              <div className="w-10 h-10 bg-gray-600 rounded-full"></div>
+                              <div className="space-y-2">
+                                <div className="h-4 bg-gray-600 rounded w-20"></div>
+                                <div className="h-3 bg-gray-600 rounded w-24"></div>
+                              </div>
+                            </div>
+                          </div>
+                        ))
+                      ) : (
+                        testimonials.map((testimonial) => (
             <div 
               key={testimonial.id}
               className="glass-card p-6 border border-accent-purple/30 bg-gradient-to-br from-accent-purple/10 to-transparent hover:from-accent-purple/15 transition-all duration-300 group"
@@ -95,10 +129,11 @@ export function Testimonials() {
 
               {/* Decorative elements */}
               <div className="absolute top-3 right-3 w-1.5 h-1.5 bg-accent-purple rounded-full opacity-40 group-hover:opacity-60 transition-opacity"></div>
-              <div className="absolute bottom-3 left-3 w-1 h-1 bg-accent-pink rounded-full opacity-30 group-hover:opacity-50 transition-opacity"></div>
-            </div>
-          ))}
-        </div>
+              <div className="absolute bottom-3 left-3 w-1 h-1 bg-accent-pink rounded-full opacity-30 group-hover:opacity-50 transition-opacity">                          </div>
+                        </div>
+                      ))
+                    )}
+                    </div>
 
         {/* Bottom accent */}
         <div className="flex justify-center mt-8">

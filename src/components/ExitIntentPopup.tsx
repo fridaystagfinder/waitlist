@@ -148,7 +148,7 @@ export function ExitIntentPopup({ isWaitlistPage = false }: ExitIntentPopupProps
               <div className="w-16 h-16 bg-gradient-to-r from-accent-purple to-accent-pink rounded-full flex items-center justify-center mx-auto mb-4">
                 <Gift className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-2">Join the FridayStag Waitlist</h2>
+              <h2 className="text-2xl font-bold text-white mb-2">Get Early Access to FridayStag</h2>
               <p className="text-gray-300 text-sm">
                 Be first in line for <span className="text-accent-purple font-semibold">early access</span> + 
                 <span className="text-accent-pink font-semibold"> exclusive launch perks</span>

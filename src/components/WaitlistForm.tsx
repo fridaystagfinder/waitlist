@@ -130,14 +130,48 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
 
   const handleInputChange = (field: keyof FormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-    // Clear error when user starts typing
-    if (errors[field as keyof FormErrors]) {
+    
+    // Real-time validation
+    if (value !== '') {
+      let fieldError: string | undefined;
+      
+      switch (field) {
+        case 'name':
+          if (typeof value === 'string' && value.trim().length < 2) {
+            fieldError = 'Name must be at least 2 characters';
+          }
+          break;
+        case 'email':
+          if (typeof value === 'string' && value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+            fieldError = 'Please enter a valid email address';
+          }
+          break;
+        case 'phone':
+          if (typeof value === 'string' && value.trim() && !/^\+?[\d\s\-\(\)]{10,}$/.test(value.trim())) {
+            fieldError = 'Please enter a valid phone number';
+          }
+          break;
+        case 'city':
+          if (value === 'Other' && formData.customCity.trim() === '') {
+            fieldError = 'Please specify your city';
+          }
+          break;
+        case 'customCity':
+          if (formData.city === 'Other' && typeof value === 'string' && value.trim() === '') {
+            fieldError = 'Please specify your city';
+          }
+          break;
+      }
+      
+      setErrors(prev => ({ ...prev, [field]: fieldError }));
+    } else {
+      // Clear error when field is empty
       setErrors(prev => ({ ...prev, [field]: undefined }));
     }
   };
 
   return (
-    <section className="relative py-20 px-4">
+    <section className="relative py-16 px-4">
       <div className="container mx-auto max-w-4xl">
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -186,7 +220,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         </div>
 
         {/* Form Section */}
-        <div className="glass-card p-8 md:p-12">
+        <div id="waitlist-form" className="glass-card p-8 md:p-12">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-3">Ready to Join?</h3>
             <p className="text-gray-300 text-sm">
