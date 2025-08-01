@@ -181,9 +181,8 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <p className="text-gray-300 text-sm">
               Be among the first to experience India's solo-friendly nightlife app. Get exclusive early access to Friday Swipes, verified venues, and exclusive safety features.
             </p>
-                </div>
-
-
+          </div>
+        </div>
 
         {/* Form Section */}
         <div className="glass-card p-8 md:p-12">
