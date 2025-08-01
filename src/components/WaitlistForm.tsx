@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, User, Phone, MapPin, CheckCircle, AlertCircle, Loader } from 'lucide-react';
+import { Mail, User, Phone, MapPin, CheckCircle, AlertCircle, Loader, MessageSquareHeart } from 'lucide-react';
 
 interface WaitlistFormProps {
   onSuccess: (name: string) => void;
@@ -342,6 +342,22 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                     {errors.city}
                   </div>
                 )}
+              </div>
+
+              {/* Comments Field */}
+              <div className="form-group">
+                <label htmlFor="comments" className="form-label">
+                  <MessageSquareHeart className="w-4 h-4" />
+                  Comments & Feedback (Optional)
+                </label>
+                <textarea
+                  id="comments"
+                  value={formData.comments}
+                  onChange={(e) => handleInputChange('comments', e.target.value)}
+                  className="form-input min-h-[80px] resize-none"
+                  placeholder="Share your thoughts, suggestions, or any feedback..."
+                  disabled={isSubmitting}
+                />
               </div>
 
               {/* Consent Checkbox */}
