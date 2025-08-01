@@ -28,9 +28,20 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
           <h1 className="hero-title">
             Unleash Your Stag Life!
           </h1>
-          <p className="hero-subtitle">
-            India's first stag-friendly platform for solos. Verified Solo-friendly venues (day & night). Friday-Swipe to make exclusive connections. Work from Cafe (/ Bar) Mode. Women-Only Mode. SOS Shield for Safety & Security. Most importantly, Always free for users!!
-          </p>
+          <div className="hero-subtitle-container">
+            <p className="hero-subtitle-main">
+              India's first stag-friendly platform for solos
+            </p>
+            <div className="hero-features">
+              <span className="feature-tag">✓ Verified Venues (Day & Night)</span>
+              <span className="feature-tag">✓ Friday-Swipe Connections</span>
+              <span className="feature-tag">✓ Work-from-Cafe Mode</span>
+              <span className="feature-tag">✓ Safety & Security</span>
+            </div>
+            <div className="free-highlight">
+              <span className="free-text">Always Free for Users!!</span>
+            </div>
+          </div>
           
           {/* "Tired of this?" Section */}
           <div className="glass-card p-6 mb-8 max-w-2xl mx-auto">
@@ -69,6 +80,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             className="cta-button group mb-4"
           >
             <span>Jump on the Waitlist</span>
+            <span className="free-forever-badge">Free Forever!</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           
@@ -90,7 +102,8 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <Users className="w-8 h-8 text-white" />
             </div>
             <h3 className="feature-title">Friday Swipe (24h Only)</h3>
-            <p className="feature-description">Connect with verified solo goers exclusively on Fridays. No dating app—just vibrant nights with like-minded company. Always free.</p>
+            <p className="feature-description">Connect with verified solo goers exclusively on Fridays. No dating app—just vibrant nights with like-minded company.</p>
+            <div className="free-badge">Always Free</div>
           </div>
 
           <div className="feature-card glass-card">
@@ -98,15 +111,8 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <MapPin className="w-8 h-8 text-white" />
             </div>
             <h3 className="feature-title">Stag & Solo-Friendly Venues</h3>
-            <p className="feature-description">Discover verified bars, lounges, and cafés that welcome solo visitors. No more 'stags not allowed' or "Book a table for two."</p>
-          </div>
-
-          <div className="feature-card glass-card">
-            <div className="feature-icon">
-              <Shield className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="feature-title">Safety Stack (SOS Shield, Women-Only Mode)</h3>
-            <p className="feature-description">Feel secure with WhatsApp SOS, verified Women-Only mode, and venue safety checks. Your safety, your control.</p>
+            <p className="feature-description">Discover verified bars, lounges, and cafés that welcome solo visitors. No more 'stags not allowed' restrictions.</p>
+            <div className="safety-badge">Safety Verified</div>
           </div>
 
           <div className="feature-card glass-card">
@@ -114,7 +120,8 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <Coffee className="w-8 h-8 text-white" />
             </div>
             <h3 className="feature-title">Work-from-Cafe + Bar Mode</h3>
-            <p className="feature-description">Transform any venue into your office. Find Wi-Fi, power outlets, and quality coffee or quality food (happy hours)—while we build the footfall for Cozy Cafes/ Bars/Pubs during off-peak hours.</p>
+            <p className="feature-description">Transform any venue into your office. Wi-Fi, power outlets, quality food—while building footfall for venues during off-peak hours.</p>
+            <div className="unique-badge">Unique Feature</div>
           </div>
         </div>
       </div>
