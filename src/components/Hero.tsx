@@ -42,10 +42,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <span className="feature-tag highlight-executive">✓ Executive Friendly (Not Another Dating App)</span>
             </div>
           
-          {/* City Momentum Notification */}
-          <div className="city-notification" id="cityNotification">
-            <span className="notification-text">🚀 Bengaluru signing up fastest | Hyderabad catching up!</span>
-          </div>
+
           </div>
           
           {/* "Tired of this?" Section */}

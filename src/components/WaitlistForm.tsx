@@ -226,6 +226,14 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <p className="text-gray-300 text-sm">
               Jump on the waitlist—always free, always private.
             </p>
+            
+            {/* City Momentum Notification */}
+            <div className="mt-3 p-3 bg-gradient-to-r from-green-500/15 to-emerald-500/15 rounded-lg border border-green-500/30">
+              <p className="text-green-400 text-xs font-semibold text-center">
+                🚀 Bengaluru signing up fastest | Hyderabad catching up!
+              </p>
+            </div>
+            
             <div className="mt-4 p-4 bg-gradient-to-r from-accent-purple/15 to-accent-pink/15 rounded-xl border border-accent-purple/30">
               <p className="text-accent-purple text-sm font-semibold text-center">
                 🎁 Early access + exclusive perks (t-shirts, keychains & more)
