@@ -28,7 +28,7 @@ export function About({ onJoinWaitlist }: AboutProps) {
             Why FridayStag?
           </h2>
           <p className="section-subtitle">
-            India's nightlife and urban spaces weren't built for solos. FridayStag changes that. We're building a new kind of urban access layer—for anyone who moves independently but wants to feel welcome. From solo after-work plans to Friday bar nights, we make it easier to step out, connect, and feel sorted. We're solving for access, trust, and a better way to be solo—without being alone.
+            Urban spaces often shut out solo individuals. India's nightlife and urban spaces weren't built for solos. FridayStag changes that. We're building a new kind of urban access layer—for anyone who moves independently but wants to feel welcome. From solo after-work plans to Friday bar nights, we make it easier to step out, connect, and feel sorted. We're solving for access, trust, and a better way to be solo—without being alone.
           </p>
         </div>
 
@@ -36,30 +36,30 @@ export function About({ onJoinWaitlist }: AboutProps) {
           <div className="about-card glass-card">
             <div className="about-card-title">
               <Shield className="w-8 h-8" />
-              Safe, Stigma-Free Access
+              Access Where Others Exclude
             </div>
             <div className="about-card-content">
-              Break free from 'stags not allowed' and harassment. Verified venues and community-powered safety features like Women-Only Mode and SOS Shield let you explore confidently.
+              Break free from 'stags not allowed' and awkward discovery. Verified venues and our exclusive Friday-Only Swipe connect you to experiences and people—no dating, just like-minded company.
             </div>
           </div>
 
           <div className="about-card glass-card">
             <div className="about-card-title">
               <Users className="w-8 h-8" />
-              Friday-Only, Real Connections
+              Built for Your Safety & Peace of Mind
             </div>
             <div className="about-card-content">
-              Ditch endless dating swipes. Our exclusive Friday-Only Swipe connects verified solos for quality, platonic meetups—no romance pressure.
+              Your security matters. SOS Shield (WhatsApp-triggered), Women-Only Mode, and rigorous venue verification create a trusted environment for every solo user.
             </div>
           </div>
 
           <div className="about-card glass-card">
             <div className="about-card-title">
               <Target className="w-8 h-8" />
-              Trust & Privacy First
+              Forever Free, Forever Focused on You
             </div>
             <div className="about-card-content">
-              Built by solos, for solos. We prioritize your trust and privacy—venue verification, opt-in data sharing, and a commitment to keeping user data private. Forever free for users.
+              Unlike apps that monetize users, we're free forever. We focus on connecting you to venues and fellow solos, including daytime work-from spots, not selling your data or pushing subscriptions.
             </div>
           </div>
         </div>

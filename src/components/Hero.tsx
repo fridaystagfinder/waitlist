@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Users, Shield, ArrowRight } from 'lucide-react';
+import { MapPin, Users, Shield, ArrowRight, Coffee } from 'lucide-react';
 
 interface HeroProps {
   onJoinWaitlist: () => void;
@@ -29,7 +29,7 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             Unleash Your Stag Life!
           </h1>
           <p className="hero-subtitle">
-            India's first stag-friendly platform for solos. Verified Stag-friendly venues. Friday-Swipe exclusive connections. Work from Cafe Options. Always free for users. Safe & Secured for women. Soulful for solos.
+            India's first stag-friendly platform for solos. Verified Solo-friendly venues (day & night). Friday-Swipe to make exclusive connections. Work from Cafe (/ Bar) Mode. Women-Only Mode. SOS Shield for Safety & Security. Most importantly, Always free for users!!
           </p>
           
           {/* "Tired of this?" Section */}
@@ -51,6 +51,10 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
                 <span className="text-sm text-gray-300">"Just need a place to work with Wi-Fi?"</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
+                <span className="text-sm text-gray-300">"I'm new to the city, where are the solo-friendly venues?"</span>
               </div>
             </div>
             <div className="mt-4 p-4 bg-gradient-to-r from-accent-purple/20 to-accent-pink/20 rounded-lg border border-accent-purple/30">
@@ -85,24 +89,32 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             <div className="feature-icon">
               <Users className="w-8 h-8 text-white" />
             </div>
-            <h3 className="feature-title">Friday Swipe (24h)</h3>
-            <p className="feature-description">Connect with verified solo goers exclusively on Fridays for 24 hours. No bots, no noise—just platonic, vibrant nights planned.</p>
+            <h3 className="feature-title">Friday Swipe (24h Only)</h3>
+            <p className="feature-description">Connect with verified solo goers exclusively on Fridays. No dating app—just vibrant nights with like-minded company. Always free.</p>
           </div>
 
           <div className="feature-card glass-card">
             <div className="feature-icon">
               <MapPin className="w-8 h-8 text-white" />
             </div>
-            <h3 className="feature-title">Stag-Friendly Venues</h3>
-            <p className="feature-description">Discover verified bars, cafés, and co-working spaces where solo visitors are not just welcome—they're celebrated.</p>
+            <h3 className="feature-title">Stag & Solo-Friendly Venues</h3>
+            <p className="feature-description">Discover verified bars, lounges, and cafés that welcome solo visitors. No more 'stags not allowed' or "Book a table for two."</p>
           </div>
 
           <div className="feature-card glass-card">
             <div className="feature-icon">
               <Shield className="w-8 h-8 text-white" />
             </div>
-            <h3 className="feature-title">Safety Stack</h3>
-            <p className="feature-description">Women-Only Mode, SOS Shield, and venue verification ensure every night out feels safe and sorted.</p>
+            <h3 className="feature-title">Safety Stack (SOS Shield, Women-Only Mode)</h3>
+            <p className="feature-description">Feel secure with WhatsApp SOS, verified Women-Only mode, and venue safety checks. Your safety, your control.</p>
+          </div>
+
+          <div className="feature-card glass-card">
+            <div className="feature-icon">
+              <Coffee className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="feature-title">Work-from-Cafe + Bar Mode</h3>
+            <p className="feature-description">Transform any venue into your office. Find Wi-Fi, power outlets, and quality coffee or quality food (happy hours)—while we build the footfall for Cozy Cafes/ Bars/Pubs during off-peak hours.</p>
           </div>
         </div>
       </div>

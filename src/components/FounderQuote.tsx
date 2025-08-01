@@ -19,7 +19,7 @@ export function FounderQuote() {
           {/* Quote text */}
           <blockquote className="relative z-10 text-2xl md:text-3xl font-light text-white mb-8 leading-relaxed">
             <span className="text-accent-purple">"</span>
-            The world is yours, even if you're alone.
+            The world is yours, even if you explore it alone.
             <span className="text-accent-pink">"</span>
           </blockquote>
           

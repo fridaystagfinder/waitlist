@@ -32,7 +32,7 @@ export function ThankYouPage({ userName, onBackToHome }: ThankYouPageProps) {
           Welcome to Your Stag Life, {userName}!
         </h1>
         <p className="thank-you-message">
-          You're officially part of the FridayStag pre-launch. You will be the first to be notified of the app launch with amazing perks. Get ready to unleash your stag life!
+          You're officially part of the movement to make India solo-friendly! You will be the first to be notified of the app launch with amazing perks. Get ready to unleash your stag life!
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400 mb-8">
