@@ -8,10 +8,11 @@ export function AnonymousFeedback() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [feedbackType, setFeedbackType] = useState<'thoughts' | 'contact' | 'suggestions'>('thoughts');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Auto-collapse when scrolling
+      // Auto-collapse when scrolling - with throttling
       if (isExpanded && !isSubmitted) {
         setIsExpanded(false);
       }
@@ -24,11 +25,23 @@ export function AnonymousFeedback() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Throttle scroll events for better performance
+    let ticking = false;
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', throttledScroll, { passive: true });
     document.addEventListener('click', handleClickOutside);
     
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledScroll);
       document.removeEventListener('click', handleClickOutside);
     };
   }, [isExpanded, isSubmitted]);
@@ -38,6 +51,7 @@ export function AnonymousFeedback() {
     if (!feedback.trim() || isSubmitting) return;
 
     setIsSubmitting(true);
+    setError(null);
 
     try {
       const submissionData = {
@@ -47,6 +61,8 @@ export function AnonymousFeedback() {
         page_url: window.location.href,
         created_at: new Date().toISOString()
       };
+
+      console.log('Submitting feedback:', submissionData); // Debug log
 
       const response = await fetch('https://gntvbngvllfinnympena.supabase.co/rest/v1/anonymous_feedback', {
         method: 'POST',
@@ -58,6 +74,8 @@ export function AnonymousFeedback() {
         body: JSON.stringify(submissionData)
       });
 
+      console.log('Response status:', response.status); // Debug log
+
       if (response.ok) {
         setIsSubmitted(true);
         setFeedback('');
@@ -67,11 +85,15 @@ export function AnonymousFeedback() {
           setIsSubmitted(false);
         }, 3000);
       } else {
-        throw new Error('Failed to submit feedback');
+        const errorText = await response.text();
+        console.error('Server error:', errorText);
+        throw new Error(`Failed to submit feedback: ${response.status}`);
       }
     } catch (error) {
       console.error('Error submitting feedback:', error);
-      // You could add error state here if needed
+      setError('Failed to submit. Please try again.');
+      // Auto-hide error after 3 seconds
+      setTimeout(() => setError(null), 3000);
     } finally {
       setIsSubmitting(false);
     }
@@ -188,6 +210,12 @@ export function AnonymousFeedback() {
                     disabled={isSubmitting}
                     maxLength={500}
                   />
+                  
+                  {error && (
+                    <div className="text-red-400 text-xs bg-red-900/20 border border-red-500/30 rounded-md p-2 mb-2">
+                      {error}
+                    </div>
+                  )}
                   
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-500">

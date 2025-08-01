@@ -321,23 +321,26 @@ body {
 /* Special styling for Waitlist tab */
 .waitlist-tab {
   position: relative;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15));
-  border-color: rgba(139, 92, 246, 0.3);
-  animation: waitlistGlow 2s ease-in-out infinite;
 }
 
-.waitlist-tab:hover {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(236, 72, 153, 0.25));
-  border-color: rgba(139, 92, 246, 0.4);
-  transform: translateY(-1px);
+.waitlist-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent-orange);
+  border-radius: 50%;
+  margin-left: 6px;
+  animation: dotPulse 2s ease-in-out infinite;
 }
 
-@keyframes waitlistGlow {
+@keyframes dotPulse {
   0%, 100% { 
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+    opacity: 0.6;
+    transform: scale(1);
   }
   50% { 
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+    opacity: 1;
+    transform: scale(1.2);
   }
 }
 

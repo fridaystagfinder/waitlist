@@ -1,6 +1,5 @@
 import React from 'react';
 import { ActiveTab } from '../App';
-import { ArrowRight } from 'lucide-react';
 
 interface TabNavigationProps {
   activeTab: ActiveTab;
@@ -24,7 +23,7 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
         >
           {tab.label}
           {tab.id === 'waitlist' && (
-            <ArrowRight className="w-3 h-3 ml-1 animate-pulse" />
+            <span className="waitlist-dot"></span>
           )}
         </button>
       ))}
