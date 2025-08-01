@@ -35,10 +35,11 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
             <div className="hero-features">
               <span className="feature-tag highlight-primary">✓ Verified Stag Friendly Venues (Day & Night)</span>
               <span className="feature-tag highlight-exclusive">✓ Friday-Swipe (Exclusive Feature)</span>
+              <span className="feature-tag highlight-verified">✓ Verified Users - No Spammers</span>
               <span className="feature-tag highlight-unique">✓ Work from Cafe (or) Bar</span>
               <span className="feature-tag highlight-safety">✓ Women Only Mode</span>
               <span className="feature-tag highlight-security">✓ Improved SOS Shield (Safe & Secure)</span>
-              <span className="feature-tag highlight-corporate">✓ Corporate Executive Friendly (Not a Dating App)</span>
+              <span className="feature-tag highlight-executive">✓ Executive Friendly (Not Another Dating App)</span>
             </div>
             <div className="free-highlight">
               <span className="free-text">Always Free for Users!!</span>
