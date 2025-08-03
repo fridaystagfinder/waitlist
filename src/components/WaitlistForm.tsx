@@ -283,6 +283,10 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                   <Phone className="w-4 h-4" />
                   Phone Number *
                 </label>
+                <div className="mt-2 text-xs text-gray-400 flex items-start gap-2">
+                  <span className="text-accent-purple">🔒</span>
+                  <span>For app notifications - feel free to use your real number (we respect privacy)</span>
+                </div>
                 <input
                   type="tel"
                   id="phone"
@@ -292,10 +296,6 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                   placeholder="Or enter your real number for notifications"
                   disabled={isSubmitting}
                 />
-                <div className="mt-2 text-xs text-gray-400 flex items-start gap-2">
-                  <span className="text-accent-purple">🔒</span>
-                  <span>For app notifications - feel free to use any number</span>
-                </div>
                 {errors.phone && (
                   <div className="form-error">
                     <AlertCircle className="w-4 h-4" />
