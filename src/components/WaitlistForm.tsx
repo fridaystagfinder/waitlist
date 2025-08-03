@@ -294,7 +294,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                 />
                 <div className="mt-2 text-xs text-gray-400 flex items-start gap-2">
                   <span className="text-accent-purple">🔒</span>
-                  <span>Feel free to use 9999999999 or any fake number - we understand privacy concerns!</span>
+                  <span>For app notifications - feel free to use any number</span>
                 </div>
                 {errors.phone && (
                   <div className="form-error">
