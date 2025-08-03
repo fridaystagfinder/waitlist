@@ -63,7 +63,7 @@ export function About({ onJoinWaitlist }: AboutProps) {
               Your security matters. SOS Shield (WhatsApp-triggered), Women-Only Mode, and rigorous venue verification create a trusted environment for every solo user.
             </div>
           </div>
-
+          
           <div className="about-card glass-card">
             <div className="about-card-title">
               <Target className="w-8 h-8" />

@@ -45,7 +45,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    phone: '',
+    phone: '9999999999',
     city: '',
     customCity: '',
     comments: '',
@@ -289,9 +289,13 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   className={`form-input ${errors.phone ? 'error' : ''}`}
-                  placeholder="Enter your phone number"
+                  placeholder="Or enter your real number for notifications"
                   disabled={isSubmitting}
                 />
+                <div className="mt-2 text-xs text-gray-400 flex items-start gap-2">
+                  <span className="text-accent-purple">🔒</span>
+                  <span>Feel free to use 9999999999 or any fake number - we understand privacy concerns!</span>
+                </div>
                 {errors.phone && (
                   <div className="form-error">
                     <AlertCircle className="w-4 h-4" />
