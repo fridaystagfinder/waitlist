@@ -41,7 +41,7 @@ export function Footer({ onNavigate }: FooterProps) {
             </p>
             <div className="flex items-center space-x-2 text-sm mt-2">
               <MapPin className="w-4 h-4 text-purple-400" />
-              <span>Hyderabad • Bengaluru • Mumbai • Delhi • Pune • Kolkata • Goa • Chennai • Vizag</span>
+              <span>Hyderabad • Bengaluru • Mumbai • Delhi • Pune • Kolkata • Goa • Chennai • Vizag • + Your City</span>
             </div>
             <p className="text-xs text-gray-500 mt-3">
               Your data stays with you—never shared or sold.
