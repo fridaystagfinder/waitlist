@@ -30,8 +30,8 @@ export function Hero({ onJoinWaitlist }: HeroProps) {
           </h1>
           <div className="hero-subtitle-container">
             <p className="hero-subtitle-main">
-              India's first stag friendly platform for stags & solo women
-          </p>
+              India's first stag-friendly app for singles, women, and independent souls
+            </p>
           </div>
           
           {/* "Tired of this?" Section */}
